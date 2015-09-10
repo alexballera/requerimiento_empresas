@@ -12,7 +12,8 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     minifyHTML = require('gulp-minify-html'),
     reload = browserSync.reload,
-    del = require('del');
+    del = require('del'),
+    deploy      = require('gulp-gh-pages');
 
 var globs = {
   sass: 'app/styles/sass/styles.scss',
@@ -38,6 +39,12 @@ gulp.task('serve', function () {
     logPrefix: 'BrowserSync',
     server: __dirname + '/dist'
   });
+});
+
+//Push build to gh-pages
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
 });
 
 // HTML
