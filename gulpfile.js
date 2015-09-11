@@ -137,5 +137,5 @@ gulp.task('watch', function() {
 });
 
 // Default task
-gulp.task('default', ['serve', 'watch', 'fonts', 'clean'], function() {
+gulp.task('default', ['serve', 'watch', 'clean'], function() {
 });
