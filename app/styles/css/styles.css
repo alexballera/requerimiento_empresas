@@ -1,6 +1,7 @@
 @import url(../lib/normalize.css);
 body,
 figure,
+footer,
 img {
   margin: 0;
   padding: 0;
@@ -60,6 +61,7 @@ a {
 }
 
 .informacion {
+  width: 100%;
   background: #AEAEAE;
   margin-top: 4em;
 }
@@ -99,6 +101,9 @@ a {
   color: #aeaeae;
 }
 
+.servicios {
+  width: 100%;
+}
 .servicios__contenedor {
   max-width: 1000px;
   min-height: 527px;
@@ -141,6 +146,7 @@ a {
 
 .productos {
   background: #AEAEAE;
+  width: 100%;
 }
 .productos__contenedor {
   max-width: 1000px;
@@ -165,7 +171,7 @@ a {
 .productos__item {
   background: grey;
   width: 300px;
-  height: 100% px;
+  height: 100%;
   text-align: center;
   padding: 2em .25em 1em .25em;
   margin: .15em 0;
@@ -181,4 +187,103 @@ a {
 .activo {
   background: #1e1e1e;
   color: #aeaeae;
+}
+
+.footer {
+  width: 100%;
+  padding-bottom: 0;
+}
+.footer__contenedor {
+  max-width: 1000px;
+  min-height: 320px;
+  margin: 0 auto;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+      -ms-flex-flow: wrap;
+          flex-flow: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+.footer__contenedor--form {
+  height: 320px;
+  max-width: 480px;
+}
+.footer__contenedor--redes {
+  margin: 2em 4em;
+}
+.footer__contacto--titulo {
+  font-size: 1.85em;
+  font-weight: normal;
+  text-align: center;
+}
+.footer__contacto--form, .footer__contacto--nombre, .footer__contacto--telefono, .footer__contacto--email, .footer__contacto--mensaje {
+  display: block;
+  width: 27em;
+  height: 2em;
+  line-height: 2em;
+  margin-top: .5em;
+}
+.footer__contacto--mensaje {
+  resize: none;
+}
+.footer__contacto--boton {
+  display: block;
+  width: 50%;
+  height: 2em;
+  line-height: 2em;
+  margin: .5em 25%;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.footer__contacto--boton:hover {
+  background: #1e1e1e;
+  color: #aeaeae;
+}
+.footer__contacto--nav {
+  text-align: center;
+}
+.footer__contacto--nav ul {
+  margin: 0;
+  padding: 0;
+}
+.footer__contacto--item {
+  display: inline-block;
+  text-decoration: none;
+}
+.footer__contacto--legal {
+  background: #1e1e1e;
+  height: 1.5em;
+}
+.footer__contacto--link {
+  display: inline-block;
+  color: grey;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0 0.5em;
+}
+.footer__contacto--link:hover {
+  background: #aeaeae;
+  color: #1e1e1e;
+}
+.footer__contacto--redes {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+      -ms-flex-flow: wrap;
+          flex-flow: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+.privacidad {
+  background: #aeaeae;
+  color: #1e1e1e;
 }

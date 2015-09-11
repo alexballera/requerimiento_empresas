@@ -142,32 +142,50 @@
       </article>
     </div>
   </section>
-  <footer>
-    <section class="contacto">
-      <form action="">
-        <input type="text" placeholder="Nombre">
-        <input type="text" placeholder="Teléfono">
-        <input type="text" placeholder="Email">
-        <textarea name="Mensaje" placeholder="Mensaje"></textarea>
-      </form>
-      <div class="direccion">
-        <div class="redes"></div>
-      </div>
-    </section>
-    <section class="legal">
-      <nav>
-        <ul>
-          <li><a href="#">lorem</a></li>
-          <li><a href="#">lorem</a></li>
-          <li><a href="#">lorem</a></li>
-          <li><a href="#">lorem</a></li>
-        </ul>
-      </nav>
-    </section>
+  <footer class="footer">
+      <section class="footer__contacto footer__contenedor">
+        <div class="footer__contenedor--form">
+          <h2 class="footer__contacto--titulo">Si tienes más dudas, escríbenos:</h2>
+            <form class="footer__contacto--form" action="">
+              <input class="footer__contacto--nombre" type="text" placeholder="Nombre">
+              <input class="footer__contacto--telefono" type="tel" placeholder="Teléfono">
+              <input class="footer__contacto--email" type="email" placeholder="Email">
+              <textarea class="footer__contacto--mensaje" placeholder="Mensaje"></textarea>
+              <input class="footer__contacto--boton" type="submit" name="name" value="Enviar">
+            </form>
+        </div>
+        <div class="footer__contenedor--form direccion">
+          <div class="footer__contacto--contenedor">
+            <h2 class="footer__contacto--titulo">Dirección:</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro culpa quos quisquam eaque. Dignissimos earum adipisci, quibusdam ipsam, consectetur minima vitae voluptate veritatis esse laboriosam soluta, omnis tempora optio fugit.
+            </p>
+          </div>
+          <div class="footer__contenedor--redes">
+            <div class="footer__contacto--redes">
+              <figure class="footer__figure"><a href="#"><img class="footer__figure--imagen" src="images/img40x40.png" alt=""></a>
+              </figure>
+              <figure class="footer__figure"><a href="#"><img class="footer__figure--imagen" src="images/img40x40.png" alt=""></a>
+              </figure>
+              <figure class="footer__figure"><a href="#"><img class="footer__figure--imagen" src="images/img40x40.png" alt=""></a>
+              </figure>
+              <figure class="footer__figure"><a href="#"><img class="footer__figure--imagen" src="images/img40x40.png" alt=""></a>
+              </figure>
+            </div>
+          </div>          
+        </div>
+      </section>
+      <section class="footer__contacto--legal">
+        <nav class="footer__contacto--nav">
+          <ul class="footer__contacto--lista">
+            <li class="footer__contacto--item"><a class="footer__contacto--link privacidad" href="#">Políticas de Privacidad</a></li>
+            <li class="footer__contacto--item"><a class="footer__contacto--link legales" href="#">Términos Legales</a></li>
+            <li class="footer__contacto--item"><a class="footer__contacto--link uso" href="#">Términos de Uso</a></li>
+            <li class="footer__contacto--item"><a class="footer__contacto--link span" href="#">Políticas sobre Span</a></li>
+          </ul>
+        </nav>
+      </section>
   </footer>
-
-
-
   <script src="scripts/vendors/modernizr-2.8.3.min.js"></script>
   <script src="scripts/js/main.min.js"></script>
   <script>window.jQuery || document.write('<script src="http://code.jquery.com/jquery-2.1.4.min.js"><\/script>')</script>
