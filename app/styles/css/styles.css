@@ -69,11 +69,12 @@ a {
   width: 100%;
   background: #AEAEAE;
   margin-top: 4em;
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 .informacion__contenedor {
   max-width: 800px;
-  min-height: 580px;
+  min-height: 570px;
   margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -110,10 +111,11 @@ a {
 .servicios {
   width: 100%;
   padding-bottom: 10px;
+  padding-top: 10px;
 }
 .servicios__contenedor {
   max-width: 1000px;
-  min-height: 510px;
+  min-height: 500px;
   margin: 0 auto;
   padding: 0;
   display: -webkit-box;
@@ -155,10 +157,11 @@ a {
   background: #AEAEAE;
   width: 100%;
   padding-bottom: 10px;
+  padding-top: 10px;
 }
 .productos__contenedor {
   max-width: 1000px;
-  min-height: 510px;
+  min-height: 500px;
   margin: 0 auto;
   padding: 0;
   display: -webkit-box;

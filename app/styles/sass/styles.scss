@@ -69,10 +69,11 @@ a{
   width: 100%;
   background: #AEAEAE;
   margin-top: 4em;
+  padding-top: 10px;
   padding-bottom: 10px;
   &__contenedor{
     max-width: 800px;
-    min-height: 580px;
+    min-height: 570px;
     margin: 0 auto;
     display: flex;
     flex-flow: wrap;
@@ -101,10 +102,10 @@ a{
 .servicios{
   width: 100%;
   padding-bottom: 10px;
+  padding-top: 10px;
   &__contenedor{
     max-width: 1000px;
-    min-height: 510px;
-    //height: 590px;
+    min-height: 500px;
     margin: 0 auto;
     padding: 0;
     display: flex;
@@ -136,9 +137,10 @@ a{
   background: #AEAEAE;
   width: 100%;
   padding-bottom: 10px;
+  padding-top: 10px;
   &__contenedor{
     max-width: 1000px;
-    min-height: 510px;
+    min-height: 500px;
     margin: 0 auto;
     padding: 0;
     display: flex;
