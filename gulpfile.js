@@ -21,6 +21,7 @@ var globs = {
   js: 'app/scripts/main.js',
   html: 'app/index.html',
   image: 'app/assets/images/*',
+  fonts: 'app/fonts/**',
   folder: [
     'dist/styles/css',
     'dist/scripts/js',
@@ -103,6 +104,15 @@ gulp.task('images', function() {
     .pipe(notify({ message: 'Images task complete' }));
 });
 
+// Copy web fonts to dist
+gulp.task('fonts', function () {
+  'use strict';
+  return gulp.src(['app/fonts/**'])
+    .pipe(gulp.dest('dist/fonts'))
+    .pipe(notify({ message: 'Fonts task complete' }));
+
+});
+
 // Clean
 gulp.task('clean', function(cb) {
   'use strict';
@@ -116,6 +126,8 @@ gulp.task('watch', function() {
   gulp.watch(globs.js, ['scripts']);
   gulp.watch(globs.image, ['images']);
   gulp.watch(globs.html, ['html']);
+  gulp.watch(globs.fonts, ['fonts']);
+  gulp.watch(globs.fonts).on('change', reload);
   gulp.watch(globs.html).on('change', reload);
   gulp.watch(globs.image).on('change', reload);
   gulp.watch(globs.folder[0] + '/*').on('change', reload);
