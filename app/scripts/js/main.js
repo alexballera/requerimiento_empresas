@@ -1,4 +1,4 @@
 (function() {
   'use strict';
-  alert('prueba2');
+  console.log('prueba2');
 })();

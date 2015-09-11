@@ -1,0 +1,27 @@
+{
+  "name": "requerimiento_empresas",
+  "version": "0.0.0",
+  "homepage": "https://github.com/alexballera/requerimiento_empresas",
+  "authors": [
+    "alexballera <alexballera@gmail.com>"
+  ],
+  "description": "Requerimiento de la seccion ¿Eres Empresa?",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "keywords": [
+    "taima"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

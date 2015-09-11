@@ -30,10 +30,11 @@ var globs = {
     'app/images',
     'dist'
   ]
-}
+};
 
 // Serve
 gulp.task('serve', function () {
+  'use strict';
   browserSync({
     notify: false,
     logPrefix: 'BrowserSync',
@@ -43,12 +44,14 @@ gulp.task('serve', function () {
 
 //Push build to gh-pages
 gulp.task('deploy', function () {
-  return gulp.src("./dist/**/*")
-    .pipe(deploy())
+  'use strict';
+  return gulp.src('./dist/**/*')
+    .pipe(deploy());
 });
 
 // HTML
 gulp.task('html', function() {
+  'use strict';
   var opts = {
     conditionals: true,
     spare:true
@@ -62,6 +65,7 @@ gulp.task('html', function() {
 
 // Styles
 gulp.task('styles', function() {
+  'use strict';
   return sass(globs.sass, { style: 'expanded' })
     .pipe(autoprefixer('last 2 version'))
     .pipe(gulp.dest(globs.folder[0]))
@@ -75,6 +79,7 @@ gulp.task('styles', function() {
 
 // Scripts
 gulp.task('scripts', function() {
+  'use strict';
   return gulp.src(globs.js)
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
@@ -90,6 +95,7 @@ gulp.task('scripts', function() {
 
 // Images
 gulp.task('images', function() {
+  'use strict';
   return gulp.src(globs.image)
     .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
     .pipe(gulp.dest(globs.folder[2]))
@@ -99,16 +105,19 @@ gulp.task('images', function() {
 
 // Clean
 gulp.task('clean', function(cb) {
-    del([globs.css, globs.folder[1] + '/main.js'], cb)
+  'use strict';
+    del([globs.css, globs.folder[1] + '/main.js'], cb);
 });
 
 // Watch
 gulp.task('watch', function() {
+  'use strict';
   gulp.watch(globs.sass, ['styles']);
   gulp.watch(globs.js, ['scripts']);
   gulp.watch(globs.image, ['images']);
   gulp.watch(globs.html, ['html']);
   gulp.watch(globs.html).on('change', reload);
+  gulp.watch(globs.image).on('change', reload);
   gulp.watch(globs.folder[0] + '/*').on('change', reload);
   gulp.watch(globs.folder[1] + '/*').on('change', reload);
   gulp.watch(globs.folder[2] + '/*').on('change', reload);
@@ -116,5 +125,5 @@ gulp.task('watch', function() {
 });
 
 // Default task
-gulp.task('default', ['html', 'serve', 'styles', 'scripts', 'images', 'watch', 'clean'], function() {
+gulp.task('default', ['serve', 'watch', 'clean'], function() {
 });
