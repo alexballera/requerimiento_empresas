@@ -6,6 +6,11 @@ img {
   padding: 0;
 }
 
+.u-containerDefault {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .menu {
   background: #1e1e1e;
   text-align: center;
@@ -29,6 +34,9 @@ img {
   right: 4em;
   display: inline-block;
 }
+.menu__lista .empresa {
+  background: grey;
+}
 .menu__lista--item {
   display: inline-block;
 }
@@ -40,5 +48,39 @@ img {
   margin-left: 1em;
 }
 .menu__lista--link:hover {
-  background: grey;
+  background: #aeaeae;
+}
+
+.informacion {
+  background: #AEAEAE;
+  width: 100%;
+  height: 580px;
+}
+.informacion__contenedor {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: flex-wrap;
+      -ms-flex-flow: flex-wrap;
+          flex-flow: flex-wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 98%;
+}
+.informacion__resumen {
+  width: 45%;
+  text-align: justify;
+}
+.informacion__boton {
+  width: 80%;
+  height: 3em;
+  margin: 0 2em;
+  font-weight: bold;
+  font-size: 1.2em;
 }
