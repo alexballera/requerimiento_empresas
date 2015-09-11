@@ -69,10 +69,11 @@ a {
   width: 100%;
   background: #AEAEAE;
   margin-top: 4em;
+  padding-bottom: 10px;
 }
 .informacion__contenedor {
   max-width: 800px;
-  min-height: 500px;
+  min-height: 580px;
   margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -108,10 +109,11 @@ a {
 
 .servicios {
   width: 100%;
+  padding-bottom: 10px;
 }
 .servicios__contenedor {
   max-width: 1000px;
-  min-height: 527px;
+  min-height: 510px;
   margin: 0 auto;
   padding: 0;
   display: -webkit-box;
@@ -152,10 +154,11 @@ a {
 .productos {
   background: #AEAEAE;
   width: 100%;
+  padding-bottom: 10px;
 }
 .productos__contenedor {
   max-width: 1000px;
-  min-height: 520px;
+  min-height: 510px;
   margin: 0 auto;
   padding: 0;
   display: -webkit-box;
