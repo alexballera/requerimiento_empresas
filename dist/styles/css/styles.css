@@ -1,4 +1,5 @@
 @import url(../lib/normalize.css);
+@import url(../fonts/fonts.css);
 body,
 figure,
 footer,
@@ -230,6 +231,7 @@ a {
 }
 .footer__figure {
   margin: 1em 1em 0 0;
+  font-size: 2em;
 }
 .footer__contacto--titulo {
   font-size: 1.85em;
@@ -299,8 +301,20 @@ a {
   margin: 0;
   padding: 0;
 }
+.footer__contacto--icon {
+  color: #1e1e1e;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2.5em;
+  margin-right: .5em;
+}
 
 .privacidad {
   background: #aeaeae;
   color: #1e1e1e;
+}
+
+span {
+  margin: 0;
+  padding: 0;
 }
