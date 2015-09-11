@@ -222,12 +222,15 @@ a {
   max-width: 480px;
 }
 .footer__contenedor--redes {
-  margin: 2em 4em;
+  margin: 0;
+  padding: 0;
+}
+.footer__figure {
+  margin: 1em 1em 0 0;
 }
 .footer__contacto--titulo {
   font-size: 1.85em;
   font-weight: normal;
-  text-align: center;
 }
 .footer__contacto--form, .footer__contacto--nombre, .footer__contacto--telefono, .footer__contacto--email, .footer__contacto--mensaje {
   display: block;
@@ -286,9 +289,12 @@ a {
   -webkit-flex-flow: wrap;
       -ms-flex-flow: wrap;
           flex-flow: wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0;
+  padding: 0;
 }
 
 .privacidad {

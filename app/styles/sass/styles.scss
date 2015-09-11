@@ -182,15 +182,18 @@ a{
       max-width: 480px;
     }
     &--redes{
-      margin: 2em 4em;
+      margin: 0;
+      padding: 0;
     }
+  }
+  &__figure{
+    margin: 1em 1em 0 0;
   }
   &__contacto{
 
     &--titulo{
       font-size: 1.85em;
       font-weight: normal;
-      text-align: center;
     }
     &--form,
     &--nombre,
@@ -249,7 +252,9 @@ a{
     &--redes{
       display: flex;
       flex-flow: wrap;
-      justify-content: space-around;
+      justify-content: flex-start;
+      margin: 0;
+      padding: 0;
     }
   }
 }
