@@ -1,2 +1,46 @@
 @charset "UTF-8";
 @import "../lib/normalize.css";
+
+body,
+figure,
+img{
+  margin: 0;
+  padding: 0;
+}
+
+.menu{
+  background: #1e1e1e;
+  text-align: center;
+  height: 4em;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  top: 0;
+  z-index: 3;
+  &__figure{
+    display: inline-block;
+    position: absolute;
+    left: 4em;
+    top: .75em;
+  }
+  &__lista{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 4em;
+    display: inline-block;
+    &--item{
+      display: inline-block;
+    }
+    &--link{
+      color: white;
+      text-decoration: none;
+      line-height: 4em;
+      display: inline-block;
+      margin-left: 1em;
+    }
+    &--link:hover{
+      background: grey;
+    }
+  }
+}
