@@ -2,6 +2,8 @@
 body,
 figure,
 footer,
+section,
+h2,
 img {
   margin: 0;
   padding: 0;
@@ -15,8 +17,11 @@ a {
 .u-containerDefault {
   width: 100%;
   min-height: 527px;
-  padding-top: 2em;
-  padding-bottom: 2em;
+}
+
+.u-titulo {
+  padding: 1em 0;
+  text-align: center;
 }
 
 .menu {
@@ -197,7 +202,7 @@ a {
   max-width: 1000px;
   min-height: 320px;
   margin: 0 auto;
-  padding: 0;
+  padding-top: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
