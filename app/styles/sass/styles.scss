@@ -7,6 +7,7 @@ figure,
 footer,
 section,
 h2,
+span,
 img{
   margin: 0;
   padding: 0;
@@ -165,10 +166,10 @@ a{
     color: #aeaeae;
   }
 }
-.activo{
-  background: #1e1e1e;
-  color: #aeaeae;
-}
+// .activo{
+//   background: #1e1e1e;
+//   color: #aeaeae;
+// }
 .footer{
   width: 100%;
   padding-bottom: 0;
@@ -268,13 +269,4 @@ a{
         margin-right: .5em;
     }
   }
-}
-
-.privacidad{
-  background: #aeaeae;
-  color: #1e1e1e;
-}
-span{
-  margin: 0;
-  padding: 0;
 }
