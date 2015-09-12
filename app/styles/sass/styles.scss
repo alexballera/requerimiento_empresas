@@ -177,7 +177,10 @@ a{
   background: #1e1e1e;
   color: #aeaeae;
   a{
-    color: #aeaeae
+    color: #aeaeae;
+  }
+  a:hover{
+    color: grey;
   }
   &__contenedor{
     max-width: 1100px;
@@ -255,10 +258,6 @@ a{
       line-height: 1.5em;
       margin: 0;
       padding: 0 0.5em;
-    }
-    &--link:hover{
-      background: #aeaeae;
-      color: #1e1e1e;
     }
     &--redes{
       display: flex;

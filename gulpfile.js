@@ -43,7 +43,7 @@ gulp.task('serve', function () {
   });
 });
 
-//Push build to gh-pages
+//Deploy to gh-pages (GitHub)
 gulp.task('deploy', function () {
   'use strict';
   return gulp.src('./dist/**/*')

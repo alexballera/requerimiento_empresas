@@ -207,6 +207,9 @@ a {
 .footer a {
   color: #aeaeae;
 }
+.footer a:hover {
+  color: grey;
+}
 .footer__contenedor {
   max-width: 1100px;
   min-height: 230px;
@@ -283,10 +286,6 @@ a {
   line-height: 1.5em;
   margin: 0;
   padding: 0 0.5em;
-}
-.footer__contacto--link:hover {
-  background: #aeaeae;
-  color: #1e1e1e;
 }
 .footer__contacto--redes {
   display: -webkit-box;
