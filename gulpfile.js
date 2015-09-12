@@ -21,7 +21,7 @@ var globs = {
   js: 'app/scripts/main.js',
   html: 'app/index.html',
   image: 'app/assets/images/*',
-  fonts: 'app/fonts/**',
+  fonts: 'app/styles/fonts/**',
   folder: [
     'dist/styles/css',
     'dist/scripts/js',
@@ -107,8 +107,8 @@ gulp.task('images', function() {
 // Copy web fonts to dist
 gulp.task('fonts', function () {
   'use strict';
-  return gulp.src(['app/fonts/**'])
-    .pipe(gulp.dest('dist/fonts'))
+  return gulp.src(['app/styles/fonts/**'])
+    .pipe(gulp.dest('dist/styles/fonts'))
     .pipe(notify({ message: 'Fonts task complete' }));
 
 });
@@ -137,5 +137,5 @@ gulp.task('watch', function() {
 });
 
 // Default task
-gulp.task('default', ['serve', 'watch', 'clean'], function() {
+gulp.task('default', ['serve', 'watch','fonts', 'clean'], function() {
 });
