@@ -26,6 +26,27 @@ a{
   text-align: center;
 }
 
+.header{
+  &__button{
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      background: #1e1e1e;
+      color: grey;
+      border: none;
+      position: fixed;
+      z-index: 3;
+      right: 1em;
+      top: 1em;
+      outline: 0;
+      display: none;
+    }
+      .is-active
+      {
+        display: block;
+      }
+}
+
 .menu{
   background: #1e1e1e;
   position: fixed;
@@ -59,10 +80,12 @@ a{
       line-height: 4em;
       display: inline-block;
       padding: 0 2em;
+      &:hover{
+        color: #1e1e1e;
+      }
     }
-    &--link:hover{
+    &--item:hover{
       background: #aeaeae;
-      color: #1e1e1e;
     }
   }
 }
@@ -70,12 +93,11 @@ a{
 .informacion{
   width: 100%;
   background: #AEAEAE;
-  margin-top: 4em;
-  padding-top: 10px;
+  padding-top: 70px;
   padding-bottom: 10px;
   &__contenedor{
     max-width: 800px;
-    min-height: 570px;
+    min-height: 580px;
     margin: 0 auto;
     display: flex;
     flex-flow: wrap;
@@ -83,16 +105,20 @@ a{
     align-items: center;
     width: 100%;
   }
-  &__figure{
+  &__figure--img-300{
+    display: none;
+  }
+  &__figure--img-250{
+    display: none;
   }
   &__resumen{
     width: 45%;
     text-align: justify;
   }
   &__boton{
-    width: 60%;
+    width: 100%;
     height: 3em;
-    margin: 0 20%;
+    margin: 0 auto;
     font-weight: bold;
     font-size: 1.2em;
   }
@@ -166,10 +192,7 @@ a{
     color: #aeaeae;
   }
 }
-// .activo{
-//   background: #1e1e1e;
-//   color: #aeaeae;
-// }
+
 .footer{
   width: 100%;
   padding-bottom: 0;
@@ -238,17 +261,24 @@ a{
       background: #1e1e1e;
       color: #aeaeae;
     }
+    
     &--nav{
+      width: 60%;
+      margin: 0 auto;
       text-align: center;
+      min-width: 40px;
     }
     &--nav ul{
-      margin: 0;
+      margin: 0 auto;
       padding: 0;
+      display: flex;
+      flex-flow: wrap;
+      justify-content: space-around;
+      background: #1e1e1e;
     }
     &--item{
       display: inline-block;
       text-decoration: none;
-
     }
     &--legal{
       height: 1.5em;
@@ -276,5 +306,48 @@ a{
     &--icon:hover{
       color: grey;
     }
+  }
+}
+@media screen and (max-width: 902px){
+  .footer__contacto--legal{
+      min-height: 40px;
+      background: #1e1e1e;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .menu{
+    height: auto;
+    left: -200px;
+    width: 250px;
+    transition: .3s;
+    &__lista--item
+    {
+      display: block;
+      background: #1e1e1e;
+      color: grey;
+    }
+    &.is-active
+    {
+      left: -10px;
+    }
+  }
+  .header__button:hover{
+    background: grey;
+    color: #1e1e1e;
+  }
+  .informacion__figure--img{
+    display: none;
+  }
+  .informacion__figure--img-300{
+    display: block;
+  }  
+}
+@media screen and (max-width: 480px){
+  .informacion__figure--img-300{
+    display: none;
+  }
+  .informacion__figure--img-250{
+    display: block;
   }
 }

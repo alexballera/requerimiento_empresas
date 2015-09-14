@@ -15,13 +15,15 @@
   <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-  <header>
-    <nav class="menu">
+  <header class="header">
+    <button class="header__button is-active icon-menu" id="showMenu"></button>
+    <button class="header__button icon-menu" id="hideMenu"></button>
+    <nav class="menu" id="menu">
       <figure class="menu__figure"><a href="#"><img class="menu__figure--imagen" src="images/img40x40.png" alt=""></a>
       </figure>
       <ul class="menu__lista">
-        <li class="menu__lista--item"><a href="#productos" class="menu__lista--link inicia">Iniciar Sesión</a></li>
-        <li class="menu__lista--item"><a href="#" class="menu__lista--link empresa">¿Eres Empresa</a></li>
+        <li class="menu__lista--item"><a href="#" class="menu__lista--link inicia">Inicia Sesión</a></li>
+        <li class="menu__lista--item"><a href="#" class="menu__lista--link empresa">¿Eres Empresa?</a></li>
       </ul>
     </nav>
   </header>
@@ -29,6 +31,8 @@
     <div class="informacion__contenedor">
       <figure class="informacion__figure">
         <img class="informacion__figure--img" src="images/img400x400.png" alt="">
+        <img class="informacion__figure--img informacion__figure--img-300" src="images/img300x300.png" alt="">
+        <img class="informacion__figure--img informacion__figure--img-250" src="images/img250x250.png" alt="">
       </figure>
       <main class="informacion__resumen">
         <p class="informacion__resumen--texto">
@@ -222,15 +226,16 @@
             <li class="footer__contacto--item"><a class="footer__contacto--link privacidad" href="#">Políticas de Privacidad</a></li>
             <li class="footer__contacto--item"><a class="footer__contacto--link legales" href="#">Términos Legales</a></li>
             <li class="footer__contacto--item"><a class="footer__contacto--link uso" href="#">Términos de Uso</a></li>
-            <li class="footer__contacto--item"><a class="footer__contacto--link span" href="#">Políticas sobre Span</a></li>
+            <li class="footer__contacto--item"><a class="footer__contacto--link span" href="#">Políticas sobre Spam</a></li>
           </ul>
         </nav>
       </section>
   </footer>
   <script src="scripts/vendors/modernizr-2.8.3.min.js"></script>
-  <script src="scripts/js/main.min.js"></script>
   <script>window.jQuery || document.write('<script src="http://code.jquery.com/jquery-2.1.4.min.js"><\/script>')</script>
+  <script src="scripts/js/main.min.js"></script>
   <script src="scripts/vendors/retina.min.js"></script>
+  <script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
