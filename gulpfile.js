@@ -1,19 +1,20 @@
-var gulp = require('gulp'),
-    sass = require('gulp-ruby-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    minifycss = require('gulp-minify-css'),
-    jshint = require('gulp-jshint'),
-    uglify = require('gulp-uglify'),
-    imagemin = require('gulp-imagemin'),
-    rename = require('gulp-rename'),
-    concat = require('gulp-concat'),
-    notify = require('gulp-notify'),
-    cache = require('gulp-cache'),
-    browserSync = require('browser-sync'),
-    minifyHTML = require('gulp-minify-html'),
-    reload = browserSync.reload,
-    del = require('del'),
-    deploy      = require('gulp-gh-pages');
+var gulp          = require('gulp'),
+    sass          = require('gulp-ruby-sass'),
+    autoprefixer  = require('gulp-autoprefixer'),
+    minifycss     = require('gulp-minify-css'),
+    jshint        = require('gulp-jshint'),
+    uglify        = require('gulp-uglify'),
+    imagemin      = require('gulp-imagemin'),
+    rename        = require('gulp-rename'),
+    concat        = require('gulp-concat'),
+    notify        = require('gulp-notify'),
+    cache         = require('gulp-cache'),
+    browserSync   = require('browser-sync'),
+    minifyHTML    = require('gulp-minify-html'),
+    reload        = browserSync.reload,
+    del           = require('del'),
+    deploy        = require('gulp-gh-pages'),
+    uncss         = require('gulp-uncss');
 
 var globs = {
   sass: 'app/styles/sass/styles.scss',
@@ -29,7 +30,8 @@ var globs = {
     'app/styles/css',
     'app/scripts/js',
     'app/images',
-    'dist'
+    'dist',
+    'app/assets/images/*'
   ]
 };
 
@@ -78,6 +80,15 @@ gulp.task('styles', function() {
     .pipe(notify({ message: 'Styles task complete' }));
 });
 
+// Optimiza styles.min.css
+gulp.task('uncss',  function()  {
+    return gulp.src('./dist/styles/css/style.min.css')
+        .pipe(uncss({
+            html: './app/index.html'
+        }))
+        .pipe(gulp.dest('./dist/styles/css'));
+});
+
 // Scripts
 gulp.task('scripts', function() {
   'use strict';
@@ -116,13 +127,13 @@ gulp.task('fonts', function () {
 // Clean
 gulp.task('clean', function(cb) {
   'use strict';
-    del([globs.css, globs.folder[1] + '/main.js'], cb);
+    del([globs.css, globs.folder[7], globs.folder[1] + '/main.js'], cb);
 });
 
 // Watch
 gulp.task('watch', function() {
   'use strict';
-  gulp.watch(globs.sass, ['styles']);
+  gulp.watch(globs.sass, ['styles', 'uncss']);
   gulp.watch(globs.js, ['scripts']);
   gulp.watch(globs.image, ['images']);
   gulp.watch(globs.html, ['html']);
