@@ -132,7 +132,11 @@ a {
 .informacion__resumen {
   padding: .5em;
   max-width: 45%;
-  text-align: justify;
+}
+.informacion__resumen--texto {
+  text-align: right;
+  font-size: 1.3em;
+  font-weight: 400;
 }
 .informacion__boton {
   width: 100%;
@@ -145,11 +149,20 @@ a {
   background: #1e1e1e;
   color: #aeaeae;
 }
+.informacion__ofrecemos {
+  background: white;
+  padding: 0;
+  margin: 0;
+}
+.informacion__ofrecemos .informacion__contenedor {
+  min-height: 525px;
+}
 
 .servicios {
   width: 100%;
   padding-bottom: 10px;
   padding-top: 10px;
+  background: grey;
 }
 .servicios__contenedor {
   max-width: 1000px;
@@ -174,7 +187,6 @@ a {
 .servicios__item {
   background: grey;
   width: 200px;
-  height: 200px;
   text-align: center;
   padding: 0;
   margin: .15em 1em;
@@ -221,6 +233,7 @@ a {
   background: grey;
   width: 300px;
   height: 100%;
+  min-height: 400px;
   text-align: center;
   padding: 2em .25em 1em .25em;
   margin: .15em 0;
@@ -233,7 +246,7 @@ a {
   color: #aeaeae;
 }
 
-.planes {
+.producto {
   background: white;
 }
 
@@ -300,15 +313,18 @@ a {
   line-height: 1.5em;
   margin-top: .5em;
 }
+.footer__contacto--nombre, .footer__contacto--telefono, .footer__contacto--email, .footer__contacto--mensaje {
+  padding-left: 1em;
+}
 .footer__contacto--mensaje {
   resize: none;
 }
 .footer__contacto--boton {
   display: block;
-  width: 50%;
-  height: 2em;
+  width: 80%;
+  height: 2.5em;
   line-height: 2em;
-  margin: .5em 25%;
+  margin: .5em auto;
   font-weight: bold;
   font-size: 1.2em;
 }
