@@ -4,6 +4,7 @@ body,
 figure,
 footer,
 section,
+h1,
 h2,
 span,
 img {
@@ -16,14 +17,35 @@ a {
   color: white;
 }
 
+.informacion__contenedor, .servicios__contenedor, .productos__contenedor, .footer__contenedor, .footer__contacto--nav ul, .footer__contacto--redes {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+      -ms-flex-flow: wrap;
+          flex-flow: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .u-containerDefault {
   width: 100%;
-  min-height: 527px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background: #AEAEAE;
 }
 
 .u-titulo {
   padding: 1em 0;
   text-align: center;
+  font-weight: 700;
+  font-size: 2em;
 }
 
 .header__button {
@@ -102,22 +124,8 @@ a {
 }
 .informacion__contenedor {
   max-width: 800px;
-  min-height: 508px;
+  min-height: 500px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: wrap;
-      -ms-flex-flow: wrap;
-          flex-flow: wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
 }
 .informacion__figure--img {
@@ -134,7 +142,6 @@ a {
   max-width: 45%;
 }
 .informacion__resumen--texto {
-  text-align: right;
   font-size: 1.3em;
   font-weight: 400;
 }
@@ -155,34 +162,14 @@ a {
   margin: 0;
 }
 .informacion__ofrecemos .informacion__contenedor {
-  min-height: 525px;
+  min-height: 515px;
 }
 
-.servicios {
-  width: 100%;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  background: grey;
-}
 .servicios__contenedor {
   max-width: 1000px;
   min-height: 500px;
   margin: 0 auto;
   padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: wrap;
-      -ms-flex-flow: wrap;
-          flex-flow: wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .servicios__item {
   background: grey;
@@ -203,31 +190,11 @@ a {
   padding: 0;
 }
 
-.productos {
-  background: #AEAEAE;
-  width: 100%;
-  padding-bottom: 10px;
-  padding-top: 10px;
-}
 .productos__contenedor {
   max-width: 1000px;
-  min-height: 500px;
+  min-height: 472px;
   margin: 0 auto;
   padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: wrap;
-      -ms-flex-flow: wrap;
-          flex-flow: wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .productos__item {
   background: grey;
@@ -239,7 +206,7 @@ a {
   margin: .15em 0;
 }
 .productos__item--titulo {
-  font-size: 2.5em;
+  font-size: 2em;
 }
 .productos__item:hover {
   background: #1e1e1e;
@@ -268,16 +235,6 @@ a {
   min-height: 230px;
   margin: 0 auto;
   padding-top: 2em;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: wrap;
-      -ms-flex-flow: wrap;
-          flex-flow: wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
 }
 .footer__contenedor--form {
   height: 230px;
@@ -291,7 +248,6 @@ a {
 }
 .footer__contenedor--form-direccion {
   min-width: 24%;
-  height: 130px;
 }
 .footer__contenedor--redes {
   margin: 0;
@@ -308,7 +264,7 @@ a {
 }
 .footer__contacto--form, .footer__contacto--nombre, .footer__contacto--telefono, .footer__contacto--email, .footer__contacto--mensaje {
   display: block;
-  width: 95%;
+  width: 93%;
   height: 1.5em;
   line-height: 1.5em;
   margin-top: .5em;
@@ -341,16 +297,6 @@ a {
 .footer__contacto--nav ul {
   margin: 0 auto;
   padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: wrap;
-      -ms-flex-flow: wrap;
-          flex-flow: wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
   background: #1e1e1e;
 }
 .footer__contacto--item {
@@ -367,17 +313,6 @@ a {
   padding: 0 0.5em;
 }
 .footer__contacto--redes {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: wrap;
-      -ms-flex-flow: wrap;
-          flex-flow: wrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   margin: 0;
   padding: 0;
 }
@@ -396,6 +331,10 @@ a {
   .footer__contacto--legal {
     min-height: 40px;
     background: #1e1e1e;
+  }
+
+  .footer__contenedor--form-direccion {
+    height: 130px;
   }
 }
 @media screen and (max-width: 815px) {

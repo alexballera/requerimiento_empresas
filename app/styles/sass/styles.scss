@@ -6,6 +6,7 @@ body,
 figure,
 footer,
 section,
+h1,
 h2,
 span,
 img{
@@ -17,13 +18,25 @@ a{
   color: white;
 }
 
+%flexwrap{
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .u-containerDefault{
   width: 100%;
-  min-height: 527px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background: #AEAEAE;
 }
+
 .u-titulo{
   padding: 1em 0;
   text-align: center;
+  font-weight: 700;
+  font-size: 2em;
 }
 
 .header{
@@ -103,13 +116,10 @@ a{
     text-align: center;
   }
   &__contenedor{
+    @extend %flexwrap;
     max-width: 800px;
-    min-height: 508px;
+    min-height: 500px;
     margin: 0 auto;
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-around;
-    align-items: center;
     width: 100%;
   }
   &__figure--img{
@@ -125,7 +135,6 @@ a{
     padding: .5em;
     max-width: 45%;
     &--texto{
-    text-align: right;
     font-size: 1.3em;
     font-weight: 400;
     }
@@ -146,24 +155,17 @@ a{
     padding: 0;
     margin: 0;
     & .informacion__contenedor{
-      min-height: 525px;
+      min-height: 515px;
     }
   }
 }
 .servicios{
-  width: 100%;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  background: grey;
   &__contenedor{
+    @extend %flexwrap;
     max-width: 1000px;
     min-height: 500px;
     margin: 0 auto;
     padding: 0;
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-around;
-    align-items: center;
   }
   &__item{
     background: grey;
@@ -185,20 +187,13 @@ a{
   }
 }
 
-.productos{
-  background: #AEAEAE;
-  width: 100%;
-  padding-bottom: 10px;
-  padding-top: 10px;
+.productos{  
   &__contenedor{
+    @extend %flexwrap;
     max-width: 1000px;
-    min-height: 500px;
+    min-height: 472px;
     margin: 0 auto;
     padding: 0;
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-around;
-    align-items: center;
   }
   &__item{
     background: grey;
@@ -209,7 +204,7 @@ a{
     padding: 2em .25em 1em .25em;
     margin: .15em 0;
     &--titulo{
-      font-size: 2.5em;
+      font-size: 2em;
     }
   }
   
@@ -235,13 +230,11 @@ a{
     color: grey;
   }
   &__contenedor{
+    @extend %flexwrap;
     max-width: 1100px;
     min-height: 230px;
     margin: 0 auto;
     padding-top: 2em;
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-around;
     &--form{
       height: 230px;
       padding-left: 2em;
@@ -253,7 +246,6 @@ a{
       }
       &-direccion{
         min-width: 24%;
-        height: 130px;
       }
     }
     &--redes{
@@ -278,7 +270,7 @@ a{
     &--email,
     &--mensaje{
       display: block;
-      width: 95%;
+      width: 93%;
       height: 1.5em;
       line-height: 1.5em;
       margin-top: .5em;
@@ -313,11 +305,9 @@ a{
       min-width: 40px;
     }
     &--nav ul{
+      @extend %flexwrap;
       margin: 0 auto;
       padding: 0;
-      display: flex;
-      flex-flow: wrap;
-      justify-content: space-around;
       background: #1e1e1e;
     }
     &--item{
@@ -334,9 +324,7 @@ a{
       padding: 0 0.5em;
     }
     &--redes{
-      display: flex;
-      flex-flow: wrap;
-      justify-content: flex-start;
+      @extend %flexwrap;
       margin: 0;
       padding: 0;
     }
@@ -358,6 +346,9 @@ a{
       min-height: 40px;
       background: #1e1e1e;
   }
+  .footer__contenedor--form-direccion{
+        height: 130px;
+      }
 }
 
 @media screen and (max-width: 815px){
