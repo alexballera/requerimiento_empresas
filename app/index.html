@@ -28,6 +28,7 @@
     </nav>
   </header>
   <section class="informacion u-containerDefault" id="informacion">
+    <h2 class="informacion__titulo u-titulo">¿Sabes qué opinan tus clientes? De tus productos y servicios...</h2>
     <div class="informacion__contenedor">
       <figure class="informacion__figure">
         <img class="informacion__figure--img" src="images/img400x400.png" alt="">
@@ -49,7 +50,7 @@
     </div>
   </section>
   <section class="servicios u-containerDefaul" id="servicios">
-    <h2 class="servicios__titulo u-titulo">Los sondeos inteligentes de Taima pueden ayudarte con</h2>
+    <h2 class="servicios__titulo u-titulo">Los sondeos inteligentes de Taima pueden apoyarte con</h2>
     <div class="servicios__contenedor">
       <div class="servicios__item">
         <a href="#">
@@ -118,6 +119,59 @@
     </div>
   </section>
   <section class="productos u-containerDefault" id="productos">
+    <h2 class="productos__titulo u-titulo">Nuestros productos</h2>
+    <div class="productos__contenedor">
+      <a href="#">
+        <article class="productos__item activo">
+          <figure class="productos__item--figure">
+            <img class="productos__item--img" src="images/img150x150.png" alt="">
+          </figure>
+          <h2 class="productos__item--titulo">Corporativo</h2>
+          <p class="productos__item--informacion">
+            Oferta de estudios de alcance nacional con universo parecido al país
+          </p>
+          <p>Sondeos Básicos</p>
+          <p>Sondeos Seriados</p>
+          <p>Básicos por Respuestas</p>
+          <p>Seriados por Respuestas</p>
+          <p>Opinador Taima Ilimitados</p>
+        </article>
+      </a>
+      <a href="#">
+        <article class="productos__item">
+          <figure class="productos__item--figure">
+            <img class="productos__item--img" src="images/img150x150.png" alt="">
+          </figure>
+          <h2 class="productos__item--titulo">Empresario</h2>
+          <p class="productos__item--informacion">
+            Oferta de estudios de alcance nacional con universo parecido al país
+          </p>
+          <p>Sondeos Básicos</p>
+          <p>Sondeos Seriados</p>
+          <p>Básicos por Respuestas</p>
+          <p>Seriados por Respuestas</p>
+          <p>Opinador Taima Ilimitados</p>
+        </article>
+      </a>
+      <a href="#">
+        <article class="productos__item">
+          <figure class="productos__item--figure">
+            <img class="productos__item--img" src="images/img150x150.png" alt="">
+          </figure>
+          <h2 class="productos__item--titulo">Aliado</h2>
+          <p class="productos__item--informacion">
+            Oferta de estudios de alcance nacional con universo parecido al país
+          </p>
+          <p>Sondeos Básicos</p>
+          <p>Sondeos Seriados</p>
+          <p>Básicos por Respuestas</p>
+          <p>Seriados por Respuestas</p>
+          <p>Opinador Taima Ilimitados</p>
+        </article>
+      </a>
+    </div>
+  </section>
+  <section class="productos u-containerDefault planes" id="planes">
     <h2 class="productos__titulo u-titulo">Planes fexibles que se adaptan a tu actividad y mercado</h2>
     <div class="productos__contenedor">
       <a href="#">
@@ -172,7 +226,7 @@
   </section>
   <footer class="footer">
       <section class="footer__contacto footer__contenedor">
-        <div class="footer__contenedor--form">
+        <div class="footer__contenedor--form footer__contenedor--form-contactanos">
           <h2 class="footer__contacto--titulo">Contáctanos:</h2>
             <form class="footer__contacto--form" action="">
               <input class="footer__contacto--nombre" type="text" placeholder="Nombre">
@@ -182,7 +236,8 @@
               <input class="footer__contacto--boton" type="submit" name="name" value="Enviar">
             </form>
         </div>
-        <div class="footer__contenedor--form">
+
+<!--         <div class="footer__contenedor--form footer__contenedor--form-acerca">
           <h2 class="footer__contacto--titulo">Acerca de Taima:</h2>
             <p><a href="#">Quienes somos</a></p>
             <p><a href="#">Junta Directiva</a></p>
@@ -190,18 +245,19 @@
             <p><a href="#">Ubicación de la Oficina</a></p>
             <p><a href="#">Trabajo</a></p>
             <p><a href="#">Ayuda</a></p>
-        </div>
-        <div class="footer__contenedor--form">
+        </div> -->
+
+        <div class="footer__contenedor--form footer__contenedor--form-enlaces">
           <h2 class="footer__contacto--titulo">Productos y Servicios:</h2>
-            <p><a href="#productos">Nuestros Productos</a></p>
+            <p><a href="#informacion">TAIMA</a></p>
             <p><a href="#servicios">Nuestros Servicios</a></p>
-            <p><a href="#informacion">Planes & Precios</a></p>
-            <p><a href="#">lore</a></p>
-            <p><a href="#">lorem</a></p>
+            <p><a href="#productos">Nuestros Productos</a></p>
+            <p><a href="#planes">Nuestros Planes</a></p>
+            <p><a href="#">Precios</a></p>
             <p><a href="#">lorem</a></p>
         </div>
-        <div class="footer__contenedor--form direccion">
-          <div class="footer__contacto--contenedor">
+        <div class="footer__contenedor--form footer__contenedor--form-direccion">
+          <!-- <div class="footer__contacto--contenedor">
             <h2 class="footer__contacto--titulo">Dirección:</h2>
             <address>
               Av Sucre. Centro Parque Boyacá. <br>
@@ -209,8 +265,9 @@
               Los Dos Caminos. Caracas, Venezuela. <br>
               +58 (0212) 4357273 <br>
             </address>
-          </div>
+          </div> -->
           <div class="footer__contenedor--redes">
+            <h2 class="footer__contacto--titulo">Síguenos:</h2>
             <div class="footer__contacto--redes">
               <a href="#" target="_blank" class="footer__contacto--icon"><i class="icon-twitter"></i></a>
               <a href="#" target="_blank" class="footer__contacto--icon"><i class="icon-facebook"></i></a>

@@ -93,9 +93,16 @@ a {
   padding-top: 70px;
   padding-bottom: 10px;
 }
+.informacion__titulo {
+  padding-top: 40px;
+  padding-bottom: 0;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
 .informacion__contenedor {
   max-width: 800px;
-  min-height: 580px;
+  min-height: 508px;
   margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -113,6 +120,9 @@ a {
           align-items: center;
   width: 100%;
 }
+.informacion__figure--img {
+  padding: .5em;
+}
 .informacion__figure--img-300 {
   display: none;
 }
@@ -120,7 +130,8 @@ a {
   display: none;
 }
 .informacion__resumen {
-  width: 45%;
+  padding: .5em;
+  max-width: 45%;
   text-align: justify;
 }
 .informacion__boton {
@@ -222,6 +233,10 @@ a {
   color: #aeaeae;
 }
 
+.planes {
+  background: white;
+}
+
 .footer {
   width: 100%;
   padding-bottom: 0;
@@ -253,8 +268,17 @@ a {
 }
 .footer__contenedor--form {
   height: 230px;
-  width: 225px;
   padding-left: 2em;
+}
+.footer__contenedor--form-contactanos {
+  min-width: 42%;
+}
+.footer__contenedor--form-enlaces {
+  min-width: 25%;
+}
+.footer__contenedor--form-direccion {
+  min-width: 24%;
+  height: 130px;
 }
 .footer__contenedor--redes {
   margin: 0;
@@ -271,7 +295,7 @@ a {
 }
 .footer__contacto--form, .footer__contacto--nombre, .footer__contacto--telefono, .footer__contacto--email, .footer__contacto--mensaje {
   display: block;
-  width: 14em;
+  width: 95%;
   height: 1.5em;
   line-height: 1.5em;
   margin-top: .5em;
@@ -358,7 +382,7 @@ a {
     background: #1e1e1e;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 815px) {
   .menu {
     height: auto;
     left: -200px;
@@ -383,23 +407,25 @@ a {
   .informacion__figure--img {
     display: none;
   }
-
   .informacion__figure--img-300 {
     display: block;
+    padding: 1em;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 648px) {
   .informacion__figure--img-300 {
     display: none;
+    padding: .5em;
   }
 
   .informacion__figure--img-250 {
     display: block;
+    padding: .5em;
   }
 }
 @media screen and (max-width: 450px) {
   .footer__contacto--legal {
-    min-height: 80px;
+    min-height: 100px;
     background: #1e1e1e;
   }
 }
