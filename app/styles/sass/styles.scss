@@ -365,6 +365,9 @@ a{
     display: block;
     padding: .5em;
   }
+  input[type=submit], input[type=button] {
+    font-size: 1em;
+  }
 }
 @media screen and (max-width: 450px){
   .footer__contacto--legal{
