@@ -33,7 +33,7 @@ a{
 }
 
 .u-titulo{
-  padding: 1em 0;
+  padding: 1em;
   text-align: center;
   font-weight: 700;
   font-size: 2em;
@@ -159,33 +159,6 @@ a{
     }
   }
 }
-.servicios{
-  &__contenedor{
-    @extend %flexwrap;
-    max-width: 1000px;
-    min-height: 500px;
-    margin: 0 auto;
-    padding: 0;
-  }
-  &__item{
-    background: grey;
-    width: 200px;
-    text-align: center;
-    padding: 0;
-    margin: .15em 1em;
-    &--figure{
-      padding-top: 1.5em;
-    }
-    &--figure:hover{
-      background: #1e1e1e;
-      color: #aeaeae;
-    }
-    &--titulo{
-      margin: 0;
-      padding: 0;
-    }
-  }
-}
 
 .productos{  
   &__contenedor{
@@ -203,8 +176,8 @@ a{
     text-align: center;
     padding: 2em .25em 1em .25em;
     margin: .15em 0;
-    &--titulo{
-      font-size: 2em;
+    &--informacion{
+      padding: 0 1em;
     }
   }
   
@@ -352,6 +325,9 @@ a{
 }
 
 @media screen and (max-width: 815px){
+  .u-titulo{    
+    font-size: 1.8em;
+  }
   .menu{
     height: auto;
     left: -200px;

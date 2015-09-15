@@ -17,7 +17,7 @@ a {
   color: white;
 }
 
-.informacion__contenedor, .servicios__contenedor, .productos__contenedor, .footer__contenedor, .footer__contacto--nav ul, .footer__contacto--redes {
+.informacion__contenedor, .productos__contenedor, .footer__contenedor, .footer__contacto--nav ul, .footer__contacto--redes {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -42,7 +42,7 @@ a {
 }
 
 .u-titulo {
-  padding: 1em 0;
+  padding: 1em;
   text-align: center;
   font-weight: 700;
   font-size: 2em;
@@ -165,31 +165,6 @@ a {
   min-height: 515px;
 }
 
-.servicios__contenedor {
-  max-width: 1000px;
-  min-height: 500px;
-  margin: 0 auto;
-  padding: 0;
-}
-.servicios__item {
-  background: grey;
-  width: 200px;
-  text-align: center;
-  padding: 0;
-  margin: .15em 1em;
-}
-.servicios__item--figure {
-  padding-top: 1.5em;
-}
-.servicios__item--figure:hover {
-  background: #1e1e1e;
-  color: #aeaeae;
-}
-.servicios__item--titulo {
-  margin: 0;
-  padding: 0;
-}
-
 .productos__contenedor {
   max-width: 1000px;
   min-height: 472px;
@@ -205,8 +180,8 @@ a {
   padding: 2em .25em 1em .25em;
   margin: .15em 0;
 }
-.productos__item--titulo {
-  font-size: 2em;
+.productos__item--informacion {
+  padding: 0 1em;
 }
 .productos__item:hover {
   background: #1e1e1e;
@@ -338,6 +313,10 @@ a {
   }
 }
 @media screen and (max-width: 815px) {
+  .u-titulo {
+    font-size: 1.8em;
+  }
+
   .menu {
     height: auto;
     left: -200px;
