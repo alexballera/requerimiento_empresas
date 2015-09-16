@@ -285,13 +285,14 @@ a{
       text-decoration: none;
     }
     &--legal{
-      height: 1.5em;
+      min-height: 1.5em;
     }
     &--link{
       display: inline-block;
       line-height: 1.5em;
       margin: 0;
-      padding: 0 0.5em;
+      padding: 0.15em 0.5em;
+      width: 150px;
     }
     &--redes{
       @extend %flexwrap;
@@ -311,14 +312,11 @@ a{
   }
 }
 
-@media screen and (max-width: 902px){
-  .footer__contacto--legal{
-      min-height: 40px;
-      background: #1e1e1e;
-  }
+@media screen and (max-width: 921px){
   .footer__contenedor--form-direccion{
-        height: 130px;
-      }
+      height: 150px;
+  }
+  
 }
 
 @media screen and (max-width: 815px){
@@ -369,10 +367,4 @@ a{
   input[type=submit], input[type=button] {
     font-size: 1em;
   }  
-}
-@media screen and (max-width: 450px){
-  .footer__contacto--legal{
-      min-height: 100px;
-      background: #1e1e1e;
-  }
 }
