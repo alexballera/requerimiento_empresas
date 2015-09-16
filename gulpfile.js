@@ -16,7 +16,8 @@ var gulp          = require('gulp'),
     deploy        = require('gulp-gh-pages'),
     uncss         = require('gulp-uncss'),
     inject        = require('gulp-inject'),
-    wiredep       = require('wiredep').stream;
+    wiredep       = require('wiredep').stream,
+    pngquant      = require('imagemin-pngquant');
 
 var globs = {
   sass: './app/styles/sass/styles.scss',
@@ -30,7 +31,7 @@ var globs = {
   folder: [
     'dist/styles/css',
     'dist/scripts/js',
-    'dist/images',
+    'dist/images/',
     'app/styles/css',
     'app/scripts/js',
     'app/images',
@@ -125,7 +126,12 @@ gulp.task('copy', function () {
 gulp.task('images', function() {
   'use strict';
   return gulp.src(globs.image)
-    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+    .pipe(cache(imagemin({ 
+      optimizationLevel: 3, 
+      progressive: true, 
+      interlaced: true,
+      use: [pngquant()]
+    })))
     .pipe(gulp.dest(globs.folder[2]));
 });
 
@@ -162,6 +168,7 @@ gulp.task('watch', function() {
   gulp.watch(globs.fonts, ['copy']);
   gulp.watch(globs.image, ['images']);
   gulp.watch(globs.html, ['html']);
+  gulp.watch(globs.image).on('change', reload);
   gulp.watch(globs.html).on('change', reload);
   gulp.watch(globs.sass).on('change', reload);
   gulp.watch(globs.js).on('change', reload);
@@ -169,7 +176,7 @@ gulp.task('watch', function() {
 });
 
 // Build
-gulp.task('build', ['inject', 'wiredep', 'copy'], function() {
+gulp.task('build', ['inject', 'wiredep', 'copy', 'images'], function() {
 });
 
 // Default task
