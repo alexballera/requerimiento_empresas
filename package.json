@@ -27,6 +27,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-gh-pages": "^0.5.2",
     "gulp-imagemin": "^2.3.0",
+    "gulp-inject": "^2.2.0",
     "gulp-jshint": "^1.11.2",
     "gulp-livereload": "^3.8.0",
     "gulp-minify-css": "^1.2.1",

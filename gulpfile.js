@@ -14,15 +14,18 @@ var gulp          = require('gulp'),
     reload        = browserSync.reload,
     del           = require('del'),
     deploy        = require('gulp-gh-pages'),
-    uncss         = require('gulp-uncss');
+    uncss         = require('gulp-uncss'),
+    inject        = require('gulp-inject');
 
 var globs = {
-  sass: 'app/styles/sass/styles.scss',
-  css: 'app/styles/css/styles.css',
-  js: 'app/scripts/main.js',
-  html: 'app/index.html',
-  image: 'app/assets/images/*',
-  fonts: 'app/styles/fonts/**',
+  sass: './app/styles/sass/styles.scss',
+  css: './app/styles/css/styles.css',
+  js: './app/scripts/main.js',
+  scripts: './app/scripts/js/**',
+  vendors: './app/scripts/vendors/**',
+  html: './app/index.html',
+  image: './app/assets/images/*',
+  fonts: './app/styles/fonts/**',
   folder: [
     'dist/styles/css',
     'dist/scripts/js',
@@ -105,6 +108,14 @@ gulp.task('scripts', function() {
     .pipe(notify({ message: 'Scripts task complete' }));
 });
 
+// Vendors to dist
+gulp.task('vendors', function () {
+  'use strict';
+  return gulp.src(['app/scripts/vendors/**'])
+    .pipe(gulp.dest('dist/scripts/vendors/'));
+
+});
+
 // Images
 gulp.task('images', function() {
   'use strict';
@@ -124,10 +135,18 @@ gulp.task('fonts', function () {
 
 });
 
+// Inyectando css y js al index.html
+gulp.task('inject', function () {
+  'use strict';
+  gulp.src('./app/**/*.html')
+  .pipe(inject(gulp.src(['./app/scripts/vendors/**.js', './app/scripts/js/**.js', './app/styles/css/**.css'], {read: false}), {relative: true}))
+  .pipe(gulp.dest('./app'));
+});
+
 // Clean
 gulp.task('clean', function(cb) {
   'use strict';
-    del([globs.css, globs.folder[7], globs.folder[1] + '/main.js'], cb);
+    del([globs.css, globs.folder[7], globs.folder[1] + '/main.js', globs.folder[4] + '/main.js'], cb);
 });
 
 // Watch
@@ -135,18 +154,17 @@ gulp.task('watch', function() {
   'use strict';
   gulp.watch(globs.sass, ['styles', 'uncss']);
   gulp.watch(globs.js, ['scripts']);
+  gulp.watch(globs.vendors, ['vendors']);
   gulp.watch(globs.image, ['images']);
-  gulp.watch(globs.html, ['html']);
+  gulp.watch(globs.html, ['html', 'clean']);
   gulp.watch(globs.fonts, ['fonts']);
   gulp.watch(globs.fonts).on('change', reload);
   gulp.watch(globs.html).on('change', reload);
   gulp.watch(globs.image).on('change', reload);
-  gulp.watch(globs.folder[0] + '/*').on('change', reload);
-  gulp.watch(globs.folder[1] + '/*').on('change', reload);
-  gulp.watch(globs.folder[2] + '/*').on('change', reload);
-  gulp.watch(globs.folder[6] + '/*').on('change', reload);
+  gulp.watch(globs.sass).on('change', reload);
+  gulp.watch(globs.js).on('change', reload);
 });
 
 // Default task
-gulp.task('default', ['serve', 'watch', 'clean'], function() {
+gulp.task('default', ['serve', 'clean', 'watch', 'inject'], function() {
 });

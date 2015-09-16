@@ -11,13 +11,11 @@ $(function() {
         $buttonShowMenu.classList.remove('is-active');
         $buttonHideMenu.classList.add('is-active');
         $menu.classList.add('is-active');
-        console.log('show');
     };
     var hideMenu = function(){
         $buttonShowMenu.classList.add('is-active');
         $buttonHideMenu.classList.remove('is-active');
         $menu.classList.remove('is-active');
-        console.log('hide');
     };
     $buttonShowMenu.addEventListener('click', showMenu);
     $buttonHideMenu.addEventListener('click', hideMenu);
