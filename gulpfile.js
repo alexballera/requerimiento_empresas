@@ -24,7 +24,7 @@ var globs = {
   scripts: './app/scripts/js/**',
   vendors: './app/scripts/vendors/**',
   html: './app/index.html',
-  image: './app/assets/images/*',
+  image: './app/images/**',
   fonts: './app/styles/fonts/**',
   folder: [
     'dist/styles/css',
@@ -33,8 +33,7 @@ var globs = {
     'app/styles/css',
     'app/scripts/js',
     'app/images',
-    'dist',
-    'app/assets/images/*'
+    'dist'
   ]
 };
 
@@ -62,7 +61,6 @@ gulp.task('html', function() {
     conditionals: true,
     spare:true
   };
-
   return gulp.src(globs.html)
     .pipe(minifyHTML(opts))
     .pipe(gulp.dest(globs.folder[6]))
@@ -74,8 +72,8 @@ gulp.task('styles', function() {
   'use strict';
   return sass(globs.sass, { style: 'expanded' })
     .pipe(autoprefixer('last 2 version'))
-    .pipe(gulp.dest(globs.folder[0]))
-    .pipe(gulp.dest(globs.folder[3]))
+    // .pipe(gulp.dest(globs.folder[0]))
+    // .pipe(gulp.dest(globs.folder[3]))
     .pipe(rename({ suffix: '.min' }))
     .pipe(minifycss())
     .pipe(gulp.dest(globs.folder[0]))
@@ -99,8 +97,8 @@ gulp.task('scripts', function() {
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
     .pipe(concat('main.js'))
-    .pipe(gulp.dest(globs.folder[1]))
-    .pipe(gulp.dest(globs.folder[4]))
+    // .pipe(gulp.dest(globs.folder[1]))
+    // .pipe(gulp.dest(globs.folder[4]))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
     .pipe(gulp.dest(globs.folder[1]))
@@ -113,7 +111,14 @@ gulp.task('vendors', function () {
   'use strict';
   return gulp.src(['app/scripts/vendors/**'])
     .pipe(gulp.dest('dist/scripts/vendors/'));
+});
 
+// Fonts to dist
+gulp.task('fonts', function () {
+  'use strict';
+  return gulp.src(['app/styles/fonts/**'])
+    .pipe(gulp.dest('dist/styles/fonts'))
+    .pipe(notify({ message: 'Fonts task complete' }));
 });
 
 // Images
@@ -121,18 +126,8 @@ gulp.task('images', function() {
   'use strict';
   return gulp.src(globs.image)
     .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest(globs.folder[2]))
-    .pipe(gulp.dest(globs.folder[5]))
-    .pipe(notify({ message: 'Images task complete' }));
-});
-
-// Copy web fonts to dist
-gulp.task('fonts', function () {
-  'use strict';
-  return gulp.src(['app/styles/fonts/**'])
-    .pipe(gulp.dest('dist/styles/fonts'))
-    .pipe(notify({ message: 'Fonts task complete' }));
-
+    .pipe(gulp.dest(globs.folder[2]));
+    // .pipe(notify({ message: 'Images task complete' }));
 });
 
 // Inyectando css y js al index.html
@@ -146,7 +141,7 @@ gulp.task('inject', function () {
 // Clean
 gulp.task('clean', function(cb) {
   'use strict';
-    del([globs.css, globs.folder[7], globs.folder[1] + '/main.js', globs.folder[4] + '/main.js'], cb);
+    del([globs.css, globs.folder[1] + '/main.js'], cb);
 });
 
 // Watch
@@ -156,15 +151,13 @@ gulp.task('watch', function() {
   gulp.watch(globs.js, ['scripts']);
   gulp.watch(globs.vendors, ['vendors']);
   gulp.watch(globs.image, ['images']);
-  gulp.watch(globs.html, ['html', 'clean']);
+  gulp.watch(globs.html, ['html']);
   gulp.watch(globs.fonts, ['fonts']);
-  gulp.watch(globs.fonts).on('change', reload);
   gulp.watch(globs.html).on('change', reload);
-  gulp.watch(globs.image).on('change', reload);
   gulp.watch(globs.sass).on('change', reload);
   gulp.watch(globs.js).on('change', reload);
 });
 
 // Default task
-gulp.task('default', ['serve', 'clean', 'watch', 'inject'], function() {
+gulp.task('default', ['serve', 'watch', 'inject'], function() {
 });
