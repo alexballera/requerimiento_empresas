@@ -159,7 +159,7 @@ a{
   }
 }
 
-.productos{  
+.productos{
   &__contenedor{
     @extend %flexwrap;
     max-width: 1000px;
@@ -179,7 +179,6 @@ a{
       padding: 0 1em;
     }
   }
-  
   &__item:hover{
     background: #1e1e1e;
     color: #aeaeae;
@@ -269,7 +268,6 @@ a{
       background: #1e1e1e;
       color: #aeaeae;
     }
-    
     &--nav{
       width: 60%;
       margin: 0 auto;
@@ -324,7 +322,7 @@ a{
 }
 
 @media screen and (max-width: 815px){
-  .u-titulo{    
+  .u-titulo{
     font-size: 1.8em;
   }
   .menu{
@@ -352,7 +350,7 @@ a{
     &-300{
       display: block;
       padding: 1em;
-    }  
+    }
   }
 }
 @media screen and (max-width: 648px){
@@ -372,5 +370,5 @@ a{
   .footer__contacto--legal{
       min-height: 100px;
       background: #1e1e1e;
-  }  
+  }
 }

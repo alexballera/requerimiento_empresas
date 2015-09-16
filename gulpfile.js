@@ -39,12 +39,18 @@ var globs = {
 };
 
 // Serve
-gulp.task('serve', function () {
+gulp.task('serve', ['build'], function () {
   'use strict';
   browserSync({
     notify: false,
-    logPrefix: 'BrowserSync',
-    server: __dirname + '/dist'
+    logPrefix: 'BS',
+    server: {
+      baseDir: 'dist'
+    },
+    port: 9000,
+    ui: {
+      port: 9001
+    }
   });
 });
 
@@ -82,6 +88,7 @@ gulp.task('styles', function() {
 
 // Optimiza styles.min.css
 gulp.task('uncss',  function()  {
+  'use strict';
     return gulp.src('./dist/styles/css/style.min.css')
         .pipe(uncss({
             html: './app/index.html'
@@ -132,6 +139,7 @@ gulp.task('inject', function () {
 
 // Inyectando las librerias Bower
 gulp.task('wiredep',  function  ()  {
+  'use strict';
     gulp.src('./app/index.html')
         .pipe(wiredep({
           directory: './app/lib'
@@ -150,7 +158,7 @@ gulp.task('watch', function() {
   'use strict';
   gulp.watch(globs.sass, ['styles', 'uncss']);
   gulp.watch(globs.js, ['scripts']);
-  gulp.watch(globs.vendors, ['copy']);  
+  gulp.watch(globs.vendors, ['copy']);
   gulp.watch(globs.fonts, ['copy']);
   gulp.watch(globs.image, ['images']);
   gulp.watch(globs.html, ['html']);
@@ -160,6 +168,10 @@ gulp.task('watch', function() {
   gulp.watch(['./bower.json'],  ['wiredep', 'copy']);
 });
 
+// Build
+gulp.task('build', ['inject', 'wiredep', 'copy'], function() {
+});
+
 // Default task
-gulp.task('default', ['serve', 'inject', 'wiredep', 'copy', 'watch'], function() {
+gulp.task('default', ['serve', 'watch'], function() {
 });
