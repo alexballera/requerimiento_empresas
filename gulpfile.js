@@ -44,7 +44,7 @@ gulp.task('serve', function () {
   browserSync({
     notify: false,
     logPrefix: 'BrowserSync',
-    server: __dirname + '/app'
+    server: __dirname + '/dist'
   });
 });
 
@@ -73,8 +73,6 @@ gulp.task('styles', function() {
   'use strict';
   return sass(globs.sass, { style: 'expanded' })
     .pipe(autoprefixer('last 2 version'))
-    // .pipe(gulp.dest(globs.folder[0]))
-    // .pipe(gulp.dest(globs.folder[3]))
     .pipe(rename({ suffix: '.min' }))
     .pipe(minifycss())
     .pipe(gulp.dest(globs.folder[0]))
@@ -98,8 +96,6 @@ gulp.task('scripts', function() {
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
     .pipe(concat('main.js'))
-    // .pipe(gulp.dest(globs.folder[1]))
-    // .pipe(gulp.dest(globs.folder[4]))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
     .pipe(gulp.dest(globs.folder[1]))
@@ -107,19 +103,15 @@ gulp.task('scripts', function() {
     .pipe(notify({ message: 'Scripts task complete' }));
 });
 
-// Vendors to dist
-gulp.task('vendors', function () {
+// Copiando vendors, lib y fonts a dist
+gulp.task('copy', function () {
   'use strict';
-  return gulp.src(['app/scripts/vendors/**'])
+  gulp.src(['app/scripts/vendors/**'])
     .pipe(gulp.dest('dist/scripts/vendors/'));
-});
-
-// Fonts to dist
-gulp.task('fonts', function () {
-  'use strict';
-  return gulp.src(['app/styles/fonts/**'])
-    .pipe(gulp.dest('dist/styles/fonts'))
-    .pipe(notify({ message: 'Fonts task complete' }));
+  gulp.src(['app/styles/fonts/**'])
+    .pipe(gulp.dest('dist/styles/fonts'));
+  gulp.src(['app/lib/**'])
+    .pipe(gulp.dest('dist/lib/'));
 });
 
 // Images
@@ -128,7 +120,6 @@ gulp.task('images', function() {
   return gulp.src(globs.image)
     .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
     .pipe(gulp.dest(globs.folder[2]));
-    // .pipe(notify({ message: 'Images task complete' }));
 });
 
 // Inyectando css y js al index.html
@@ -159,16 +150,16 @@ gulp.task('watch', function() {
   'use strict';
   gulp.watch(globs.sass, ['styles', 'uncss']);
   gulp.watch(globs.js, ['scripts']);
-  gulp.watch(globs.vendors, ['vendors']);
+  gulp.watch(globs.vendors, ['copy']);  
+  gulp.watch(globs.fonts, ['copy']);
   gulp.watch(globs.image, ['images']);
   gulp.watch(globs.html, ['html']);
-  gulp.watch(globs.fonts, ['fonts']);
   gulp.watch(globs.html).on('change', reload);
   gulp.watch(globs.sass).on('change', reload);
   gulp.watch(globs.js).on('change', reload);
-  gulp.watch(['./bower.json'],  ['wiredep']);
+  gulp.watch(['./bower.json'],  ['wiredep', 'copy']);
 });
 
 // Default task
-gulp.task('default', ['serve', 'inject', 'wiredep', 'watch'], function() {
+gulp.task('default', ['serve', 'inject', 'wiredep', 'copy', 'watch'], function() {
 });
