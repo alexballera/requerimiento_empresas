@@ -15,7 +15,8 @@ var gulp          = require('gulp'),
     del           = require('del'),
     deploy        = require('gulp-gh-pages'),
     uncss         = require('gulp-uncss'),
-    inject        = require('gulp-inject');
+    inject        = require('gulp-inject'),
+    wiredep       = require('wiredep').stream;
 
 var globs = {
   sass: './app/styles/sass/styles.scss',
@@ -43,7 +44,7 @@ gulp.task('serve', function () {
   browserSync({
     notify: false,
     logPrefix: 'BrowserSync',
-    server: __dirname + '/dist'
+    server: __dirname + '/app'
   });
 });
 
@@ -138,6 +139,15 @@ gulp.task('inject', function () {
   .pipe(gulp.dest('./app'));
 });
 
+// Inyectando las librerias Bower
+gulp.task('wiredep',  function  ()  {
+    gulp.src('./app/index.html')
+        .pipe(wiredep({
+          directory: './app/lib'
+        }))
+        .pipe(gulp.dest('./app'));
+});
+
 // Clean
 gulp.task('clean', function(cb) {
   'use strict';
@@ -156,8 +166,9 @@ gulp.task('watch', function() {
   gulp.watch(globs.html).on('change', reload);
   gulp.watch(globs.sass).on('change', reload);
   gulp.watch(globs.js).on('change', reload);
+  gulp.watch(['./bower.json'],  ['wiredep']);
 });
 
 // Default task
-gulp.task('default', ['serve', 'watch', 'inject'], function() {
+gulp.task('default', ['serve', 'inject', 'wiredep', 'watch'], function() {
 });
