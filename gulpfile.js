@@ -46,11 +46,26 @@ gulp.task('serve', ['build'], function () {
     notify: false,
     logPrefix: 'BS',
     server: {
-      baseDir: 'dist'
+      baseDir: 'app'
     },
     port: 9000,
     ui: {
       port: 9001
+    }
+  });
+});
+
+gulp.task('serve:dist', ['build'], function () {
+  'use strict';
+  browserSync({
+    notify: false,
+    logPrefix: 'BS',
+    server: {
+      baseDir: 'dist'
+    },
+    port: 4000,
+    ui: {
+      port: 4001
     }
   });
 });
@@ -177,6 +192,10 @@ gulp.task('watch', function() {
 
 // Build
 gulp.task('build', ['inject', 'wiredep', 'copy', 'images'], function() {
+});
+
+// Server task
+gulp.task('server', ['serve:dist', 'watch'], function() {
 });
 
 // Default task
