@@ -87,6 +87,9 @@ a{
     }
     &--item{
       display: inline-block;
+      &-productos{
+        display: none;
+      }
     }
     &--link{
       color: white;
@@ -95,7 +98,7 @@ a{
       padding: 0 2em;
       &:hover{
         color: #1e1e1e;
-      }
+      }      
     }
     &--item:hover{
       background: #aeaeae;
@@ -335,12 +338,15 @@ a{
       display: block;
       background: #1e1e1e;
       color: grey;
+      &-productos {
+        display: block;
+      }
     }
     &.is-active
     {
       left: -10px;
     }
-  }
+  }  
   .header__button:hover{
     background: grey;
     color: #1e1e1e;
@@ -353,6 +359,7 @@ a{
     }
   }
 }
+
 @media screen and (max-width: 648px){
   .informacion__figure--img-300{
     display: none;
@@ -364,7 +371,7 @@ a{
   }
   input[type=submit], input[type=button] {
     font-size: 1em;
-  }
+  }  
 }
 @media screen and (max-width: 450px){
   .footer__contacto--legal{

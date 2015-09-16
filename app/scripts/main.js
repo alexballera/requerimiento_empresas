@@ -1,6 +1,6 @@
 $(function() {
     'use strict';
-    if(window.matchMedia('(max-width:768px)').matches){
+    if(window.matchMedia('(max-width:815px)').matches){
     var $buttonShowMenu = document.getElementById('showMenu');
     var $buttonHideMenu = document.getElementById('hideMenu');
     var $menu = document.getElementById('menu');
