@@ -161,7 +161,18 @@ a{
     }
   }
 }
-
+#clientes{  
+  position: absolute;
+  top: 1200px;
+}
+#productos{
+  position: absolute;
+  top: 1790px;
+}
+#servicios{
+  position: absolute;
+  top: 2380px;
+}
 .productos{
   &__contenedor{
     @extend %flexwrap;
@@ -314,12 +325,49 @@ a{
     }
   }
 }
+@media screen and (max-width: 1049px){
+  #clientes{
+    position: absolute;
+    top: 1235px;
+  }
+  #productos{
+    position: absolute;
+    top: 1825px;
+  }
+  #servicios{
+    position: absolute;
+    top: 2420px;
+  }  
+}
+@media screen and (max-width: 938px){
+  #clientes{
+    position: absolute;
+    top: 1235px;
+  }
+  #productos{
+    position: absolute;
+    top: 2278px;
+  }
+  #servicios{
+    position: absolute;
+    top: 3320px;
+  }  
+}
+@media screen and (max-width: 934px){
+  #productos{
+    position: absolute;
+    top: 2308px;
+  }
+  #servicios{
+    position: absolute;
+    top: 3350px;
+  }  
+}
 
 @media screen and (max-width: 921px){
   .footer__contenedor--form-direccion{
       height: 150px;
   }
-  
 }
 
 @media screen and (max-width: 815px){
@@ -356,6 +404,12 @@ a{
       padding: 1em;
     }
   }
+  #clientes,
+  #productos,
+  #servicios{  
+    position: relative;
+    top: 0px;
+  }  
 }
 
 @media screen and (max-width: 648px){
