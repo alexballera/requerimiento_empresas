@@ -17,7 +17,8 @@ var gulp          = require('gulp'),
     uncss         = require('gulp-uncss'),
     inject        = require('gulp-inject'),
     wiredep       = require('wiredep').stream,
-    pngquant      = require('imagemin-pngquant');
+    pngquant      = require('imagemin-pngquant'),
+    bower         = require('gulp-bower');
 
 var globs = {
   sass: './app/styles/sass/styles.scss',
@@ -40,7 +41,7 @@ var globs = {
 };
 
 // Serve
-gulp.task('serve', ['build'], function () {
+gulp.task('serve', ['install'], function () {
   'use strict';
   browserSync({
     notify: false,
@@ -54,8 +55,7 @@ gulp.task('serve', ['build'], function () {
     }
   });
 });
-
-gulp.task('serve:dist', ['build'], function () {
+gulp.task('serve:dist', ['install'], function () {
   'use strict';
   browserSync({
     notify: false,
@@ -77,6 +77,18 @@ gulp.task('deploy', function () {
     .pipe(deploy());
 });
 
+// Bower Install
+gulp.task('bower-install', function () {
+  'use strict';
+    return bower({ cmd: 'install', cwd: './app' })
+        .pipe(gulp.dest('app/bower_components'));
+});
+// Bower Update
+gulp.task('bower-update', ['bower-install'], function () {
+  'use strict';
+    return bower({ cmd: 'update', cwd: './app' })
+        .pipe(gulp.dest('app/bower_components'));
+});
 // HTML
 gulp.task('html', function() {
   'use strict';
@@ -133,8 +145,10 @@ gulp.task('copy', function () {
     .pipe(gulp.dest('dist/scripts/vendors/'));
   gulp.src(['app/styles/fonts/**'])
     .pipe(gulp.dest('dist/styles/fonts'));
-  gulp.src(['app/lib/**'])
-    .pipe(gulp.dest('dist/lib/'));
+  gulp.src(['app/bower_components/**'])
+    .pipe(gulp.dest('dist/bower_components/'));
+  gulp.src(['bower.json'])
+    .pipe(gulp.dest('./app'));
 });
 
 // Images
@@ -165,7 +179,7 @@ gulp.task('wiredep',  function  ()  {
         .pipe(wiredep({
           directory: './app/bower_components'
         }))
-        .pipe(gulp.dest('./app'));
+        .pipe(gulp.dest('./app'));    
 });
 
 // Clean
@@ -181,6 +195,7 @@ gulp.task('watch', function() {
   gulp.watch(globs.js, ['scripts']);
   gulp.watch(globs.vendors, ['copy']);
   gulp.watch(globs.fonts, ['copy']);
+  gulp.watch('bower.json', ['copy']);
   gulp.watch(globs.image, ['images']);
   gulp.watch(globs.html, ['html']);
   gulp.watch(globs.image).on('change', reload);
@@ -190,8 +205,12 @@ gulp.task('watch', function() {
   gulp.watch(['./bower.json'],  ['wiredep', 'copy']);
 });
 
-// Build
-gulp.task('build', ['inject', 'wiredep', 'copy', 'images'], function() {
+// Install
+gulp.task('install', ['inject', 'bower-install', 'wiredep', 'copy', 'images'], function() {
+});
+
+// Update
+gulp.task('update', ['inject', 'bower-update', 'wiredep', 'copy', 'images'], function() {
 });
 
 // Server task
