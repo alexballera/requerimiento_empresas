@@ -161,6 +161,10 @@ a{
     }
   }
 }
+#ofrecemos{  
+  position: absolute;
+  top: 600px;
+}
 #clientes{  
   position: absolute;
   top: 1200px;
@@ -325,103 +329,7 @@ a{
     }
   }
 }
-@media screen and (max-width: 1049px){
-  #clientes{
-    position: absolute;
-    top: 1235px;
-  }
-  #productos{
-    position: absolute;
-    top: 1825px;
-  }
-  #servicios{
-    position: absolute;
-    top: 2420px;
-  }  
-}
-@media screen and (max-width: 938px){
-  #clientes{
-    position: absolute;
-    top: 1235px;
-  }
-  #productos{
-    position: absolute;
-    top: 2278px;
-  }
-  #servicios{
-    position: absolute;
-    top: 3320px;
-  }  
-}
-@media screen and (max-width: 934px){
-  #productos{
-    position: absolute;
-    top: 2308px;
-  }
-  #servicios{
-    position: absolute;
-    top: 3350px;
-  }  
-}
 
-@media screen and (max-width: 921px){
-  .footer__contenedor--form-direccion{
-      height: 150px;
-  }
-}
-
-@media screen and (max-width: 815px){
-  .u-titulo{
-    font-size: 1.8em;
-  }
-  .menu{
-    height: auto;
-    left: -200px;
-    width: 250px;
-    transition: .3s;
-    &__lista--item
-    {
-      display: block;
-      background: #1e1e1e;
-      color: grey;
-      &-productos {
-        display: block;
-      }
-    }
-    &.is-active
-    {
-      left: -10px;
-    }
-  }  
-  .header__button:hover{
-    background: grey;
-    color: #1e1e1e;
-  }
-  .informacion__figure--img{
-    display: none;
-    &-300{
-      display: block;
-      padding: 1em;
-    }
-  }
-  #clientes,
-  #productos,
-  #servicios{  
-    position: relative;
-    top: 0px;
-  }  
-}
-
-@media screen and (max-width: 648px){
-  .informacion__figure--img-300{
-    display: none;
-    padding: .5em;
-  }
-  .informacion__figure--img-250{
-    display: block;
-    padding: .5em;
-  }
-  input[type=submit], input[type=button] {
-    font-size: 1em;
-  }  
-}
+// Importando los parciales
+@import "responsive";
+@import "productos";
