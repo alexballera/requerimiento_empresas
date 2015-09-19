@@ -31,23 +31,29 @@
     <button class="header__button is-active icon-menu" id="showMenu"></button>
     <button class="header__button icon-menu" id="hideMenu"></button>
     <nav class="menu" id="menu">
-      <figure class="menu__figure"><a href="#"><img class="menu__figure--imagen" src="images/img40x40.png" alt=""></a>
+      <figure class="menu__figure"><a href="/"><img class="menu__figure--imagen" src="images/img40x40.png" alt=""></a>
       </figure>
       <ul class="menu__lista">
         <li class="menu__lista--item">
-          <a href="#" class="menu__lista--link menu__lista--link-inicia">Inicia Sesión</a>
+          <a href="/" class="menu__lista--link menu__lista--link-inicia">Inicia Sesión</a>
         </li>
         <li class="menu__lista--item">
-          <a href="#" class="menu__lista--link menu__lista--link-empresa">¿Eres Empresa?</a>
+          <a href="/" class="menu__lista--link menu__lista--link-empresa">¿Eres Empresa?</a>
+        </li>
+        <li class="menu__lista--item">
+          <a href="/" class="menu__lista--link menu__lista--link-empresa">Esp</a>
+        </li>
+        <li class="menu__lista--item">
+          <a href="ingles.html" class="menu__lista--link menu__lista--link-empresa">Eng</a>
         </li>
         <li class="menu__lista--item menu__lista--item-productos">
-          <a href="#clientes" class="menu__lista--link menu__lista--link-clientes">Clientes</a>
+          <a href="/#clientes" class="menu__lista--link menu__lista--link-clientes">Clientes</a>
         </li>
         <li class="menu__lista--item menu__lista--item-productos">
-          <a href="#productos" class="menu__lista--link menu__lista--link-productos">Productos</a>
+          <a href="/#productos" class="menu__lista--link menu__lista--link-productos">Productos</a>
         </li>
         <li class="menu__lista--item menu__lista--item-productos">
-          <a href="#servicios" class="menu__lista--link menu__lista--link-servicios">Servicios</a>
+          <a href="/#servicios" class="menu__lista--link menu__lista--link-servicios">Servicios</a>
         </li>
       </ul>
     </nav>
@@ -82,7 +88,8 @@
     </div>
   </section>
 
-  <section class="informacion informacion__ofrecemos u-containerDefault" id="ofrecemos">
+  <section class="informacion informacion__ofrecemos u-containerDefault">
+    <div id="ofrecemos"></div>
     <h1 class="informacion__titulo u-titulo"><strong>TAIMA</strong> ¿Qué ofrecemos?</h1>
       <div class="informacion__contenedor">
         <main class="informacion__resumen">
@@ -115,7 +122,7 @@
     <div id="clientes"></div>
     <h1 class="productos__titulo u-titulo">Planes fexibles que se adaptan a tu actividad y mercado</h1>
     <div class="productos__contenedor">
-      <a href="#">
+      <a href="clientes.html">
         <article class="productos__item activo">
           <figure class="productos__item--figure">
             <img class="productos__item--img" src="images/img150x150.png" alt="">
@@ -128,7 +135,7 @@
           <p class="productos__item--informacion"><strong>Opinadores TAIMA</strong></p>
         </article>
       </a>
-      <a href="#">
+      <a href="clientes.html">
         <article class="productos__item">
           <figure class="productos__item--figure">
             <img class="productos__item--img" src="images/img150x150.png" alt="">
@@ -141,7 +148,7 @@
           <p class="productos__item--informacion"><strong>Opinadores Propios</strong></p>
         </article>
       </a>
-      <a href="#">
+      <a href="clientes.html">
         <article class="productos__item">
           <figure class="productos__item--figure">
             <img class="productos__item--img" src="images/img150x150.png" alt="">
@@ -162,7 +169,7 @@
     <h1 class="productos__titulo u-titulo">Nuestros Productos</h1>
     <div class="productos__contenedor">
       <article class="productos__item activo">
-        <a href="#">
+        <a href="productos.html">
           <figure class="productos__item--figure">
             <img class="productos__item--img" src="images/img150x150.png" alt="">
           </figure>
@@ -174,7 +181,7 @@
         </a>
       </article>
       <article class="productos__item">
-        <a href="#">
+        <a href="productos.html">
           <figure class="productos__item--figure">
             <img class="productos__item--img" src="images/img150x150.png" alt="">
           </figure>
@@ -186,7 +193,7 @@
         </a>
       </article>
       <article class="productos__item">
-        <a href="#">
+        <a href="productos.html">
           <figure class="productos__item--figure">
             <img class="productos__item--img" src="images/img150x150.png" alt="">
           </figure>
@@ -206,7 +213,7 @@
     <h1 class="productos__titulo u-titulo">Los sondeos inteligentes de TAIMA pueden apoyarte con...</h1>
     <div class="productos__contenedor">
       <article class="productos__item activo">
-        <a href="#">
+        <a href="servicios.html">
           <figure class="productos__item--figure">
             <img class="productos__item--img" src="images/img150x150.png" alt="">
           </figure>
@@ -219,7 +226,7 @@
         </a>
       </article>
       <article class="productos__item">
-        <a href="#">
+        <a href="servicios.html">
           <figure class="productos__item--figure">
             <img class="productos__item--img" src="images/img150x150.png" alt="">
           </figure>
@@ -232,7 +239,7 @@
         </a>
       </article>
       <article class="productos__item">
-        <a href="#">
+        <a href="servicios.html">
           <figure class="productos__item--figure">
             <img class="productos__item--img" src="images/img150x150.png" alt="">
           </figure>
@@ -262,22 +269,22 @@
 
         <!-- <div class="footer__contenedor--form footer__contenedor--form-acerca">
           <h2 class="footer__contacto--titulo">Acerca de Taima:</h2>
-            <p><a href="#">Quienes somos</a></p>
-            <p><a href="#">Junta Directiva</a></p>
-            <p><a href="#">Socios</a></p>
-            <p><a href="#">Ubicación de la Oficina</a></p>
-            <p><a href="#">Trabajo</a></p>
-            <p><a href="#">Ayuda</a></p>
+            <p><a href="/#">Quienes somos</a></p>
+            <p><a href="/#">Junta Directiva</a></p>
+            <p><a href="/#">Socios</a></p>
+            <p><a href="/#">Ubicación de la Oficina</a></p>
+            <p><a href="/#">Trabajo</a></p>
+            <p><a href="/#">Ayuda</a></p>
         </div> -->
 
         <div class="footer__contenedor--form footer__contenedor--form-enlaces">
           <h2 class="footer__contacto--titulo">Productos y Servicios:</h2>
-            <p><a href="#informacion">TAIMA</a></p>
-            <p><a href="#ofrecemos">¿Qué Ofrecemos?</a></p>
-            <p><a href="#clientes">Nuestros Clientes</a></p>
-            <p><a href="#productos">Nuestros Productos</a></p>
-            <p><a href="#servicios">Nuestros Servicios</a></p>
-            <p><a href="#">Planes & Precios</a></p>
+            <p><a href="/#informacion">TAIMA</a></p>
+            <p><a href="/#ofrecemos">¿Qué Ofrecemos?</a></p>
+            <p><a href="/#clientes">Nuestros Clientes</a></p>
+            <p><a href="/#productos">Nuestros Productos</a></p>
+            <p><a href="/#servicios">Nuestros Servicios</a></p>
+            <p><a href="/#">Planes & Precios</a></p>
         </div>
         <div class="footer__contenedor--form footer__contenedor--form-direccion">
           <!-- <div class="footer__contacto--contenedor">
@@ -292,10 +299,10 @@
           <div class="footer__contenedor--redes">
             <h2 class="footer__contacto--titulo">Síguenos:</h2>
             <div class="footer__contacto--redes">
-              <a href="#" target="_blank" class="footer__contacto--icon"><i class="icon-twitter"></i></a>
-              <a href="#" target="_blank" class="footer__contacto--icon"><i class="icon-facebook"></i></a>
-              <a href="#" target="_blank" class="footer__contacto--icon"><i class="icon-google"></i></a>
-              <a href="#" target="_blank" class="footer__contacto--icon"><i class="icon-linkedin"></i></a>
+              <a href="/#" target="_blank" class="footer__contacto--icon"><i class="icon-twitter"></i></a>
+              <a href="/#" target="_blank" class="footer__contacto--icon"><i class="icon-facebook"></i></a>
+              <a href="/#" target="_blank" class="footer__contacto--icon"><i class="icon-google"></i></a>
+              <a href="/#" target="_blank" class="footer__contacto--icon"><i class="icon-linkedin"></i></a>
             </div>
           </div>
         </div>
@@ -303,10 +310,10 @@
       <section class="footer__contacto--legal">
         <nav class="footer__contacto--nav">
           <ul class="footer__contacto--lista">
-            <li class="footer__contacto--item"><a class="footer__contacto--link privacidad" href="#">Políticas de Privacidad</a></li>
-            <li class="footer__contacto--item"><a class="footer__contacto--link legales" href="#">Términos Legales</a></li>
-            <li class="footer__contacto--item"><a class="footer__contacto--link uso" href="#">Términos de Uso</a></li>
-            <li class="footer__contacto--item"><a class="footer__contacto--link span" href="#">Políticas sobre Spam</a></li>
+            <li class="footer__contacto--item"><a class="footer__contacto--link privacidad" href="legal.html">Políticas de Privacidad</a></li>
+            <li class="footer__contacto--item"><a class="footer__contacto--link legales" href="legal.html">Términos Legales</a></li>
+            <li class="footer__contacto--item"><a class="footer__contacto--link uso" href="legal.html">Términos de Uso</a></li>
+            <li class="footer__contacto--item"><a class="footer__contacto--link span" href="legal.html">Políticas sobre Spam</a></li>
           </ul>
         </nav>
       </section>

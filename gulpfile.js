@@ -127,7 +127,7 @@ gulp.task('uncss',  function()  {
 // Scripts
 gulp.task('scripts', function() {
   'use strict';
-  return gulp.src(globs.js)
+  return gulp.src('./app/scripts/**.js')
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
     .pipe(concat('main.js'))
@@ -168,14 +168,14 @@ gulp.task('images', function() {
 gulp.task('inject', function () {
   'use strict';
   gulp.src('./app/**/*.html')
-  .pipe(inject(gulp.src(['./app/scripts/vendors/**.js', './app/scripts/js/**.js', './app/styles/css/**.css'], {read: false}), {relative: true}))
+  .pipe(inject(gulp.src(['./app/styles/css/**.css', './app/scripts/vendors/**.js', './app/scripts/js/**.js'], {read: false}), {relative: true}))
   .pipe(gulp.dest('./app'));
 });
 
 // Inyectando las librerias Bower
 gulp.task('wiredep',  function  ()  {
   'use strict';
-    gulp.src('./app/index.html')
+    gulp.src('./app/*.html')
         .pipe(wiredep({
           directory: './app/bower_components'
         }))
@@ -191,17 +191,17 @@ gulp.task('clean', function(cb) {
 // Watch
 gulp.task('watch', function() {
   'use strict';
-  gulp.watch(globs.sass, ['styles', 'uncss']);
-  gulp.watch(globs.js, ['scripts']);
+  gulp.watch('./app/styles/sass/**.scss', ['styles', 'uncss']);
+  gulp.watch('./app/scripts/**.js', ['scripts']);
   gulp.watch(globs.vendors, ['copy']);
   gulp.watch(globs.fonts, ['copy']);
   gulp.watch('bower.json', ['copy']);
   gulp.watch(globs.image, ['images']);
-  gulp.watch(globs.html, ['html']);
+  gulp.watch('./app/**.html', ['html']);
   gulp.watch(globs.image).on('change', reload);
-  gulp.watch(globs.html).on('change', reload);
-  gulp.watch(globs.sass).on('change', reload);
-  gulp.watch(globs.js).on('change', reload);
+  gulp.watch('./app/**.html').on('change', reload);
+  gulp.watch('./app/styles/sass/**.scss').on('change', reload);
+  gulp.watch('./app/scripts/**.js').on('change', reload);
   gulp.watch(['./bower.json'],  ['wiredep', 'copy']);
 });
 
