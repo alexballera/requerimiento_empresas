@@ -69,18 +69,12 @@ a{
   right: 0;
   width: 100vw;
   top: 0;
-  z-index: 3;
-  &__figure{
-    display: inline-block;
-    position: absolute;
-    left: 4em;
-    top: .75em;
-  }
+  z-index: 3;  
   &__lista{
     margin: 0;
     padding: 0;
     position: absolute;
-    right: 4em;
+    right: 7em;
     display: inline-block;
     .empresa{
       background: grey;
@@ -102,8 +96,21 @@ a{
     }
     &--item:hover{
       background: #aeaeae;
+    }    
+  }
+  &__figure{
+    display: inline-block;
+    position: absolute;
+    left: 4em;
+    top: .75em;
+    &--flag{
+      display: inline-block;
+      position: absolute;
+      top: 10px;
+      right: 40px;
     }
   }
+  
 }
 
 .informacion{

@@ -55,6 +55,9 @@
     left: -200px;
     width: 250px;
     transition: .3s;
+    &__figure--flag{
+      display: none;
+    }
     &__lista--item
     {
       display: block;
