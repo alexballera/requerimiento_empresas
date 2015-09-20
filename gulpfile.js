@@ -73,7 +73,7 @@ gulp.task('serve:dist', ['install'], function () {
 //Deploy to gh-pages (GitHub)
 gulp.task('deploy', function () {
   'use strict';
-  return gulp.src('./dist/**/*')
+  return gulp.src('./app/**/*')
     .pipe(deploy());
 });
 
@@ -96,7 +96,7 @@ gulp.task('html', function() {
     conditionals: true,
     spare:true
   };
-  return gulp.src(globs.html)
+  return gulp.src('./app/**.html')
     .pipe(minifyHTML(opts))
     .pipe(gulp.dest(globs.folder[6]))
     .pipe(notify({ message: 'HTML task complete' }));
@@ -197,7 +197,7 @@ gulp.task('watch', function() {
   gulp.watch(globs.fonts, ['copy']);
   gulp.watch('bower.json', ['copy']);
   gulp.watch(globs.image, ['images']);
-  gulp.watch('./app/**.html', ['html']);
+  gulp.watch('./app/**/*.html', ['html']);
   gulp.watch(globs.image).on('change', reload);
   gulp.watch('./app/**.html').on('change', reload);
   gulp.watch('./app/styles/sass/**.scss').on('change', reload);
