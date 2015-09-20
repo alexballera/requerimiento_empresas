@@ -1,0 +1,23 @@
+$breakpoints: (
+  'xlarge': (max-width: 1024px),
+  'large': (max-width: 921px),
+  'medium': (max-width: 815px),
+  'small': (max-width: 648px),
+  'xsmall': (max-width: 320px)
+);
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No se ha encontrado un valor para `#{$breakpoint}`. '
+         + 'Por favor, asegurate que esta definido en el mapa `$breakpoints`.';
+  }
+}
+

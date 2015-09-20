@@ -21,7 +21,7 @@ var gulp          = require('gulp'),
     bower         = require('gulp-bower');
 
 var globs = {
-  sass: './app/styles/sass/styles.scss',
+  sass: './app/styles/sass/main.scss',
   css: './app/styles/css/styles.css',
   js: './app/scripts/main.js',
   scripts: './app/scripts/js/**',
@@ -200,7 +200,7 @@ gulp.task('watch', function() {
   gulp.watch('./app/**/*.html', ['html']);
   gulp.watch(globs.image).on('change', reload);
   gulp.watch('./app/**.html').on('change', reload);
-  gulp.watch('./app/styles/sass/**.scss').on('change', reload);
+  gulp.watch('./app/styles/sass/**/*.scss').on('change', reload);
   gulp.watch('./app/scripts/**.js').on('change', reload);
   gulp.watch(['./bower.json'],  ['wiredep', 'copy']);
 });
