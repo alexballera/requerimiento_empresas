@@ -5,22 +5,18 @@ a{
 #ofrecemos,
 #clientes,
 #productos,
-#servicios{  
+#servicios{
   position: relative;
   top: -50px;
   @include respond-to('medium') {
-    position: relative;
     top: 0px;
   }
 }
 
 .u-titulo{
-  padding: 1em;
-  text-align: center;
-  font-weight: 700;
-  font-size: 1.8em;
-  @include respond-to('medium') {
-    font-size: 1.8em;
+  @extend %titulo;
+  @include respond-to('small') {
+    font-size: 1.6em;
   }
 }
 

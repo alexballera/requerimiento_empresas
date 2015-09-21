@@ -1,12 +1,9 @@
 .informacion{
   @extend %container;
   padding-top: 70px;
-  &__titulo{
-    padding-top: 40px;
-    padding-bottom: 0;
-    margin: 0 auto;
-    text-align: center;
-  }
+  @include respond-to('medium') {
+      padding-top: 0;
+    }
   &__contenedor{
     @extend %flexwrap;
     max-width: 800px;

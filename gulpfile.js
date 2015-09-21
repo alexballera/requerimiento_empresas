@@ -96,7 +96,7 @@ gulp.task('html', function() {
     conditionals: true,
     spare:true
   };
-  return gulp.src('./app/**.html')
+  return gulp.src('./app/**/*.html')
     .pipe(minifyHTML(opts))
     .pipe(gulp.dest(globs.folder[6]))
     .pipe(notify({ message: 'HTML task complete' }));

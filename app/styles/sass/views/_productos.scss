@@ -1,0 +1,16 @@
+.productos{
+  &__basicos{
+    background: white;
+  }
+  &__seriados{
+    background: $grisclaro;
+  }
+  &__respuestas{
+    background: white;
+  }
+  &__boton{
+    max-width: (100%/3);
+    margin-left: (100%/3);
+    margin-top: .25em;
+  }
+} 
