@@ -22,7 +22,7 @@ var gulp          = require('gulp'),
 
 var globs = {
   sass: './app/styles/sass/main.scss',
-  css: './app/styles/css/styles.css',
+  css: './app/styles/css/main.css',
   js: './app/scripts/main.js',
   scripts: './app/scripts/js/**',
   vendors: './app/scripts/vendors/**',
@@ -168,7 +168,7 @@ gulp.task('images', function() {
 gulp.task('inject', function () {
   'use strict';
   gulp.src('./app/**/*.html')
-  .pipe(inject(gulp.src(['./app/styles/css/**.css', './app/scripts/vendors/**.js', './app/scripts/js/**.js'], {read: false}), {relative: true}))
+  .pipe(inject(gulp.src(['./app/styles/css/*.css', './app/scripts/vendors/**.js', './app/scripts/js/**.js'], {read: false}), {relative: true}))
   .pipe(gulp.dest('./app'));
 });
 

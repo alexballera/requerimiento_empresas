@@ -68,6 +68,11 @@
           display: block;
         }
       }
+      &-hide{
+        @include respond-to('medium') {
+          display: none;
+        }
+      }
     }
     &--link{
       color: white;
