@@ -3,7 +3,7 @@
       width: 40px;
       height: 40px;
       line-height: 40px;
-      background: #1e1e1e;
+      background: $grisoscuro;
       color: grey;
       border: none;
       position: fixed;
@@ -15,7 +15,7 @@
       &:hover{
         @include respond-to('medium') {
           background: grey;
-          color: #1e1e1e;
+          color: $grisoscuro;
         } 
       }
     }
@@ -26,7 +26,7 @@
 }
 
 .menu{
-  background: #1e1e1e;
+  background: $grisoscuro;
   position: fixed;
   text-align: center;
   height: 4em;
@@ -59,7 +59,7 @@
       display: inline-block;
       @include respond-to('medium') {
         display: block;
-        background: #1e1e1e;
+        background: $grisoscuro;
         color: grey;
       }
       &-productos{
@@ -80,11 +80,11 @@
       display: inline-block;
       padding: 0 2em;
       &:hover{
-        color: #1e1e1e;
+        color: $grisoscuro;
       }      
     }
     &--item:hover{
-      background: #aeaeae;
+      background: $grisclaro;
     }    
   }
   &__figure{

@@ -1,8 +1,6 @@
 .informacion{
-  width: 100%;
-  background: #AEAEAE;
+  @extend %container;
   padding-top: 70px;
-  padding-bottom: 10px;
   &__titulo{
     padding-top: 40px;
     padding-bottom: 0;
@@ -56,8 +54,8 @@
     font-size: 1.2em;
   }
   &__boton:hover{
-    background: #1e1e1e;
-    color: #aeaeae;
+    background: $grisoscuro;
+    color: $grisclaro;
   }
   &__ofrecemos{
     background: white;
@@ -70,6 +68,7 @@
 }
 
 .productos{
+  @extend %container;
   &__contenedor{
     @extend %flexwrap;
     max-width: 1000px;
@@ -90,8 +89,8 @@
     }
   }
   &__item:hover{
-    background: #1e1e1e;
-    color: #aeaeae;
+    background: $grisoscuro;
+    color: $grisclaro;
   }
   &__productos{
     background: white;

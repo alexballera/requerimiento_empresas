@@ -191,17 +191,17 @@ gulp.task('clean', function(cb) {
 // Watch
 gulp.task('watch', function() {
   'use strict';
-  gulp.watch('./app/styles/sass/**.scss', ['styles', 'uncss']);
-  gulp.watch('./app/scripts/**.js', ['scripts']);
+  gulp.watch('./app/styles/sass/**/*.scss', ['styles', 'uncss']);
+  gulp.watch('./app/scripts/*.js', ['scripts']);
   gulp.watch(globs.vendors, ['copy']);
   gulp.watch(globs.fonts, ['copy']);
   gulp.watch('bower.json', ['copy']);
   gulp.watch(globs.image, ['images']);
   gulp.watch('./app/**/*.html', ['html']);
   gulp.watch(globs.image).on('change', reload);
-  gulp.watch('./app/**.html').on('change', reload);
+  gulp.watch('./app/**/*.html').on('change', reload);
   gulp.watch('./app/styles/sass/**/*.scss').on('change', reload);
-  gulp.watch('./app/scripts/**.js').on('change', reload);
+  gulp.watch('./app/scripts/*.js').on('change', reload);
   gulp.watch(['./bower.json'],  ['wiredep', 'copy']);
 });
 

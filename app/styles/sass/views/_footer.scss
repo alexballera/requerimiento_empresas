@@ -2,10 +2,10 @@
   width: 100%;
   padding-bottom: 0;
   font-size: .85em;
-  background: #1e1e1e;
-  color: #aeaeae;
+  background: $grisoscuro;
+  color: $grisclaro;
   a{
-    color: #aeaeae;
+    color: $grisclaro;
   }
   a:hover{
     color: grey;
@@ -78,8 +78,8 @@
       font-size: 1.2em;
     }
     &--boton:hover{
-      background: #1e1e1e;
-      color: #aeaeae;
+      background: $grisoscuro;
+      color: $grisclaro;
     }
     &--nav{
       width: 60%;
@@ -91,7 +91,7 @@
       @extend %flexwrap;
       margin: 0 auto;
       padding: 0;
-      background: #1e1e1e;
+      background: $grisoscuro;
     }
     &--item{
       display: inline-block;
@@ -113,7 +113,7 @@
       padding: 0;
     }
     &--icon{
-        color: #aeaeae;
+        color: $grisclaro;
         text-decoration: none;
         display: inline-block;
         font-size: 2em;
