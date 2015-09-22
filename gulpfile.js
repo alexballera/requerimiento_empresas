@@ -110,8 +110,8 @@ gulp.task('styles', function() {
     .pipe(rename({ suffix: '.min' }))
     .pipe(minifycss())
     .pipe(gulp.dest(globs.folder[0]))
-    .pipe(gulp.dest(globs.folder[3]))
-    .pipe(notify({ message: 'Styles task complete' }));
+    .pipe(gulp.dest(globs.folder[3]));
+    // .pipe(notify({ message: 'Styles task complete' }));
 });
 
 // Optimiza styles.min.css
@@ -134,8 +134,8 @@ gulp.task('scripts', function() {
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
     .pipe(gulp.dest(globs.folder[1]))
-    .pipe(gulp.dest(globs.folder[4]))
-    .pipe(notify({ message: 'Scripts task complete' }));
+    .pipe(gulp.dest(globs.folder[4]));
+    // .pipe(notify({ message: 'Scripts task complete' }));
 });
 
 // Copiando vendors, lib y fonts a dist
@@ -179,7 +179,7 @@ gulp.task('wiredep',  function  ()  {
         .pipe(wiredep({
           directory: './app/bower_components'
         }))
-        .pipe(gulp.dest('./app'));    
+        .pipe(gulp.dest('./app'));
 });
 
 // Clean
