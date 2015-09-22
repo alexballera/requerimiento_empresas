@@ -34,7 +34,11 @@
     },
     "jquery": {
       "main": "dist/jquery.min.js"
+    },
+    "font-awesome": {
+      "main": "css/font-awesome.min.css"
     }
   },
-  "dependencies": {}
+  "dependencies": {
+  }
 }

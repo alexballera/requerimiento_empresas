@@ -191,7 +191,7 @@ gulp.task('clean', function(cb) {
 // Watch
 gulp.task('watch', function() {
   'use strict';
-  gulp.watch('./app/styles/sass/**/*.scss', ['styles', 'uncss']);
+  gulp.watch('./app/styles/', ['styles', 'uncss']);
   gulp.watch('./app/scripts/*.js', ['scripts']);
   gulp.watch(globs.vendors, ['copy']);
   gulp.watch(globs.fonts, ['copy']);
