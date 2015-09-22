@@ -19,7 +19,7 @@
     background: $grisclaro;
   }
   &__boton{
-    max-width: (100%/3);
+    min-width: (100%/3);
     margin-left: (100%/3);
     margin-top: .5em;
   }

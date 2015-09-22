@@ -99,7 +99,24 @@
         <p class="informacion__resumen--texto">
           <strong>TAIMA</strong> ...te apoya en saberlo
         </p>
-        <input class="informacion__boton" type="button" value="CONTÁCTANOS">
+        <a href="#openModal">
+          <button class="informacion__boton" type="button"> CONTÁCTENOS 
+          </button>
+        </a>
+        <div id="openModal" class="modalDialog">
+          <div>
+              <div class="footer__contenedor--form footer__contenedor--form-contactanos">
+                <h2 class="footer__contacto--titulo">Contáctanos:</h2>
+                <form class="footer__contacto--form" action="">
+                  <input class="footer__contacto--nombre" type="text" placeholder="Nombre">
+                  <input class="footer__contacto--telefono" type="tel" placeholder="Teléfono">
+                  <input class="footer__contacto--email" type="email" placeholder="Email">
+                  <a href="#close" title="Close" class="close">
+                  <input class="footer__contacto--boton" type="button" value="Enviar"></a>
+                </form>
+              </div>
+          </div>
+        </div>
       </main>
     </div>
   </section>
@@ -124,7 +141,10 @@
           <p class="informacion__resumen--texto">
             Servicios de asesoría y análisis...
           </p>
-          <input class="informacion__boton" type="button" value="CONTÁCTANOS">
+          <a href="#openModal">
+            <button class="informacion__boton" type="button"> CONTÁCTENOS 
+            </button>
+          </a>          
         </main>
         <figure class="informacion__figure">
           <img class="informacion__figure--img" src="../images/img400x400.png" alt="">

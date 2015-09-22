@@ -44,11 +44,15 @@
     }
   }
   &__boton{
-    width: 100%;
+    min-width: 70%;
+    margin-left: 15%;
     height: 3em;
-    margin: 0 auto;
     font-weight: bold;
     font-size: 1.2em;
+    color: $grisoscuro;
+    @include respond-to('small') {
+      font-size: 1em;
+    }
   }
   &__boton:hover{
     background: $grisoscuro;

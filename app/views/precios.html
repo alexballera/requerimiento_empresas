@@ -87,7 +87,24 @@
         <p class="informacion__resumen--texto">
           Aquí en esta vista van los <strong>Planes & Precios</strong>
         </p>
-        <input class="informacion__boton" type="button" value="CONTÁCTANOS">
+        <a href="#openModal">
+          <button class="informacion__boton" type="button"> CONTÁCTENOS 
+          </button>
+        </a>
+        <div id="openModal" class="modalDialog">
+          <div>
+              <div class="footer__contenedor--form footer__contenedor--form-contactanos">
+                <h2 class="footer__contacto--titulo">Contáctanos:</h2>
+                <form class="footer__contacto--form" action="">
+                  <input class="footer__contacto--nombre" type="text" placeholder="Nombre">
+                  <input class="footer__contacto--telefono" type="tel" placeholder="Teléfono">
+                  <input class="footer__contacto--email" type="email" placeholder="Email">
+                  <a href="#close" title="Close" class="close">
+                  <input class="footer__contacto--boton" type="button" value="Enviar"></a>
+                </form>
+              </div>
+          </div>
+        </div>
       </main>
     </div>
   </section>

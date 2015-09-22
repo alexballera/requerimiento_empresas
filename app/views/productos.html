@@ -90,40 +90,27 @@
         <p class="informacion__resumen--texto">
           ...en cuanto a duración, frecuencia de uso de la plataforma, cantidad de opinadores a alcanzar, cantidad de respuestas a obtener, nivel de servicio o asesoría, etcétera...
         </p>
-        <input class="informacion__boton" type="button" value="CONTÁCTANOS">
+        <a href="#openModal">
+          <button class="informacion__boton" type="button"> CONTÁCTENOS 
+          </button>
+        </a>
+        <div id="openModal" class="modalDialog">
+          <div>
+              <div class="footer__contenedor--form footer__contenedor--form-contactanos">
+                <h2 class="footer__contacto--titulo">Contáctanos:</h2>
+                <form class="footer__contacto--form" action="">
+                  <input class="footer__contacto--nombre" type="text" placeholder="Nombre">
+                  <input class="footer__contacto--telefono" type="tel" placeholder="Teléfono">
+                  <input class="footer__contacto--email" type="email" placeholder="Email">
+                  <a href="#close" title="Close" class="close">
+                  <input class="footer__contacto--boton" type="button" value="Enviar"></a>
+                </form>
+              </div>
+          </div>
+        </div>
       </main>
     </div>
   </section>
-
-<!--   <section class="informacion informacion__ofrecemos">
-    <div id="ofrecemos"></div>
-    <h1 class="informacion__titulo u-titulo"><strong>TAIMA</strong> ¿Qué ofrecemos?</h1>
-      <div class="informacion__contenedor">
-        <main class="informacion__resumen">
-          <p class="informacion__resumen--texto">
-            <strong>Red de Opinión</strong> móvil y web
-          </p>
-          <p class="informacion__resumen--texto">
-            Fácil alcance de <strong>Opinadores</strong>
-          </p>
-          <p class="informacion__resumen--texto">
-            <strong>Economía</strong> en tus estudios...
-          </p>
-          <p class="informacion__resumen--texto">
-            Entrega rápida de <strong>Resultados...</strong>
-          </p>
-          <p class="informacion__resumen--texto">
-            Servicios de asesoría y análisis...
-          </p>
-          <input class="informacion__boton" type="button" value="CONTÁCTANOS">
-        </main>
-        <figure class="informacion__figure">
-          <img class="informacion__figure--img" src="../images/img400x400.png" alt="">
-          <img class="informacion__figure--img informacion__figure--img-300" src="../images/img300x300.png" alt="">
-          <img class="informacion__figure--img informacion__figure--img-250" src="../images/img250x250.png" alt="">
-        </figure>
-      </div>
-  </section> -->
 
   <section class="productos productos__clientes productos__basicos">
     <div id="clientes"></div>
@@ -194,7 +181,7 @@
           <figure class="productos__item--figure">
             <img class="productos__item--img" src="../images/img150x150.png" alt="">
           </figure>
-          <h2 class="productos__item--titulo u-titulo">Seriado Opinador Taima</h2>
+          <h2 class="productos__item--titulo u-titulo">Seriado Opinador TAIMA</h2>
           <p class="productos__item--informacion">
             Los Opinadores son Ofrecidos por <strong>TAIMA</strong> con posible Segmentación con <strong>Alcance Nacional</strong> o <strong>Local</strong> según la necesidad del cliente y la <em>“estabilidad”</em> de nuestro Universo de Opinadores en cada momento requerido.
           </p>
@@ -263,9 +250,9 @@
           <figure class="productos__item--figure">
             <img class="productos__item--img" src="../images/img150x150.png" alt="">
           </figure>
-          <h2 class="productos__item--titulo u-titulo">Básico Opinador Taima Respuestas</h2>
+          <h2 class="productos__item--titulo u-titulo">Básico Opinador TAIMA Respuestas</h2>
           <p class="productos__item--informacion">
-            Se diferencia del <strong>Básico Opinador Taima</strong>, en que el precio del sondeo se calculará según el número de respuestas reales obtenidas.
+            Se diferencia del <strong>Básico Opinador TAIMA</strong>, en que el precio del sondeo se calculará según el número de respuestas reales obtenidas.
           </p>
         </a>
       </article>
@@ -309,7 +296,8 @@
           </figure>
           <h2 class="productos__item--titulo u-titulo">Básico Aliado Ilimitado</h2>
           <p class="productos__item--informacion">
-            Se diferencia del <strong>Básico Aliado Respuestas</strong>, en que el precio del sondeo es Cerrado Anual y sobre Sondeos y Respuestas Ilimitadas, pero igual se calculará según el número de respuestas reales obtenidas, en todos los Sondeos realizados. Supongamos a McDonald’s contratando este servicio para todas sus tiendas por un año.</p>
+            Se diferencia del <strong>Básico Aliado Respuestas</strong>, en que el precio del sondeo es Cerrado Anual y sobre Sondeos y Respuestas Ilimitadas, pero igual se calculará según el número de respuestas reales obtenidas, en todos los Sondeos realizados.
+          </p>
         </a>
       </article>
       <article class="productos__item">
@@ -361,16 +349,6 @@
           </form>
         </div>
 
-        <!-- <div class="footer__contenedor--form footer__contenedor--form-acerca">
-          <h2 class="footer__contacto--titulo">Acerca de Taima:</h2>
-            <p><a href="/">Quienes somos</a></p>
-            <p><a href="/">Junta Directiva</a></p>
-            <p><a href="/">Socios</a></p>
-            <p><a href="/">Ubicación de la Oficina</a></p>
-            <p><a href="/">Trabajo</a></p>
-            <p><a href="/">Ayuda</a></p>
-        </div> -->
-
         <div class="footer__contenedor--form footer__contenedor--form-enlaces">
           <h2 class="footer__contacto--titulo">Productos y Servicios:</h2>
             <p><a href="/taima/#informacion">TAIMA</a></p>
@@ -381,15 +359,6 @@
             <p><a href="/taima/#productos">Planes & Precios</a></p>
         </div>
         <div class="footer__contenedor--form footer__contenedor--form-direccion">
-          <!-- <div class="footer__contacto--contenedor">
-            <h2 class="footer__contacto--titulo">Dirección:</h2>
-            <address>
-              Av Sucre. Centro Parque Boyacá. <br>
-              Torre Centro. Piso 8. Oficina 84. <br>
-              Los Dos Caminos. Caracas, Venezuela. <br>
-              +58 (0212) 4357273 <br>
-            </address>
-          </div> -->
           <div class="footer__contenedor--redes">
             <h2 class="footer__contacto--titulo">Síguenos:</h2>
             <div class="footer__contacto--redes">

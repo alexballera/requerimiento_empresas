@@ -76,6 +76,9 @@
       margin: .5em auto;
       font-weight: bold;
       font-size: 1.2em;
+      @include respond-to('small') {
+        font-size: 1em;
+      }
     }
     &--boton:hover{
       background: $grisoscuro;
