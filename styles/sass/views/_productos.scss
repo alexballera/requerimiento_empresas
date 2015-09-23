@@ -1,0 +1,26 @@
+.productos{
+  &__basicos,
+  &__respuestas,
+  &__seriados{
+    background: white;
+    & p{
+      text-align: justify;
+    }
+    & article{
+      height: 100%;
+      min-height: 670px;
+    }
+  }
+  &__respuestas article{
+      height: 100%;
+      min-height: 500px;
+    }
+  &__seriados{
+    background: $grisclaro;
+  }
+  &__boton{
+    min-width: (100%/3);
+    margin-left: (100%/3);
+    margin-top: .5em;
+  }
+}

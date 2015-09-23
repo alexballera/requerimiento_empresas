@@ -1,0 +1,99 @@
+.informacion{
+  @extend %container;
+  padding-top: 70px;
+  @include respond-to('medium') {
+      padding-top: 0;
+    }
+  &__contenedor{
+    @extend %flexwrap;
+    max-width: 800px;
+    min-height: 500px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  &__figure--img{
+    padding: .5em;
+    @include respond-to('medium') {
+      display: none;
+    }    
+    &-300{
+      display: none;
+      @include respond-to('medium') {
+        display: block;
+        padding: 1em;
+      }
+      @include respond-to('small') {
+        display: none;
+        padding: .5em;
+      }
+    }
+    &-250{
+      display: none;
+      @include respond-to('small') {
+        display: block;
+        padding: .5em;
+      }
+    }
+  }
+  &__resumen{
+    padding: .5em;
+    max-width: 45%;
+    &--texto{
+    font-size: 1.3em;
+    font-weight: 400;
+    }
+  }
+  &__boton{
+    min-width: 70%;
+    margin-left: 15%;
+    height: 3em;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: $grisoscuro;
+    @include respond-to('small') {
+      font-size: 1em;
+    }
+  }
+  &__boton:hover{
+    background: $grisoscuro;
+    color: $grisclaro;
+  }
+  &__ofrecemos{
+    background: white;
+    padding: 0;
+    margin: 0;
+    & .informacion__contenedor{
+      min-height: 515px;
+    }
+  }
+}
+
+.productos{
+  @extend %container;
+  &__contenedor{
+    @extend %flexwrap;
+    max-width: 1000px;
+    min-height: 472px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  &__item{
+    background: grey;
+    width: 300px;
+    height: 100%;
+    min-height: 400px;
+    text-align: center;
+    padding: 2em .25em 1em .25em;
+    margin: .15em 0;
+    &--informacion{
+      padding: 0 1em;
+    }
+  }
+  &__item:hover{
+    background: $grisoscuro;
+    color: $grisclaro;
+  }
+  &__productos{
+    background: white;
+  }
+}

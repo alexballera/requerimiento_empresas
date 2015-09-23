@@ -1,0 +1,22 @@
+a{
+  text-decoration: none;
+  color: white;
+}
+#ofrecemos,
+#clientes,
+#productos,
+#servicios{
+  position: relative;
+  top: -50px;
+  @include respond-to('medium') {
+    top: 0px;
+  }
+}
+
+.u-titulo{
+  @extend %titulo;
+  @include respond-to('small') {
+    font-size: 1.6em;
+  }
+}
+
