@@ -168,7 +168,7 @@ gulp.task('images', function() {
 gulp.task('inject', function () {
   'use strict';
   gulp.src('./app/**/*.html')
-  .pipe(inject(gulp.src(['./app/styles/css/*.css', './app/scripts/vendors/**.js', './app/scripts/js/**.js'], {read: false}), {relative: true}))
+  .pipe(inject(gulp.src(['./app/styles/css/*.css', './app/styles/vendors/*.css','./app/scripts/vendors/**.js', './app/scripts/js/**.js'], {read: false}), {relative: true}))
   .pipe(gulp.dest('./app'));
 });
 
