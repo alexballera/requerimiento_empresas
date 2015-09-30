@@ -67,33 +67,3 @@
     }
   }
 }
-
-.productos{
-  @extend %container;
-  &__contenedor{
-    @extend %flexwrap;
-    max-width: 1000px;
-    min-height: 472px;
-    margin: 0 auto;
-    padding: 0;
-  }
-  &__item{
-    background: grey;
-    width: 300px;
-    height: 100%;
-    min-height: 400px;
-    text-align: center;
-    padding: 2em .25em 1em .25em;
-    margin: .15em 0;
-    &--informacion{
-      padding: 0 1em;
-    }
-  }
-  &__item:hover{
-    background: $grisoscuro;
-    color: $grisclaro;
-  }
-  &__productos{
-    background: white;
-  }
-}

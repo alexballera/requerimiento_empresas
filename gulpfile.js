@@ -185,13 +185,13 @@ gulp.task('wiredep',  function  ()  {
 // Clean
 gulp.task('clean', function(cb) {
   'use strict';
-    del([globs.css, globs.folder[1] + '/main.js'], cb);
+    del([globs.folder[0], globs.folder[3]], cb);
 });
 
 // Watch
 gulp.task('watch', function() {
   'use strict';
-  gulp.watch('./app/styles/', ['styles', 'uncss']);
+  gulp.watch('./app/styles/sass/**/*.scss', ['clean', 'styles', 'uncss']);
   gulp.watch('./app/scripts/*.js', ['scripts']);
   gulp.watch(globs.vendors, ['copy']);
   gulp.watch(globs.fonts, ['copy']);
