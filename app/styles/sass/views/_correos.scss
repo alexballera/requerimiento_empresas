@@ -1,0 +1,43 @@
+.correo{
+  @extend %container-50;
+  height: 100wh;
+  a{
+    color: blue;
+    font-weight: 700;
+  }
+  &__header{
+    background: #472C78;
+  }
+  &__header{
+    width: 100%;
+    height: 100px;
+    &--figure,
+    &--titulo {
+      display: inline-block;
+    }
+    &--titulo {
+      width: 35%;
+      text-align: center;
+      position: absolute;
+      height: 100px;
+      line-height: 100px;
+      font-weight: 700;
+      font-size: 2em;
+      color: white;
+    }
+    &--figure img{
+      width: 100px;
+      margin-left: 1em;
+    }
+  }
+  &__body,
+  &__footer{
+    padding: 1em;
+  }
+  &__footer{
+    border-top: 1px solid #472C78;
+    & .taima{
+      @extend %taima;
+    }
+  }
+}
