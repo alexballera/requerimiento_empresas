@@ -1,41 +1,55 @@
 .correo{
   @extend %container-50;
-  height: 100wh;
+  height: 650px;
   a{
-    color: blue;
+    color: #472C78;
     font-weight: 700;
   }
   &__header{
     background: #472C78;
-  }
-  &__header{
     width: 100%;
     height: 100px;
-    &--figure,
-    &--titulo {
+    &--figure {
       display: inline-block;
+        & img{
+        width: 100px;
+        margin-left: 1em;
+      }
     }
     &--titulo {
       width: 35%;
       text-align: center;
       position: absolute;
+      display: inline-block;
       height: 100px;
       line-height: 100px;
       font-weight: 700;
       font-size: 2em;
       color: white;
     }
-    &--figure img{
-      width: 100px;
-      margin-left: 1em;
-    }
   }
-  &__body,
-  &__footer{
+  &__body{
+    padding: 3em 1em;
+    height: 270px;
+  }
+  &__address{
     padding: 1em;
   }
   &__footer{
-    border-top: 1px solid #472C78;
+    max-height: 70px;
+    padding: 1em;
+    &--redes,
+    &--copy{
+      display: inline-block;
+      width: 45%;
+      & i{
+        font-size: 1.3em;
+        margin-left: .3em;
+        &:hover{
+          color: aqua;
+        }
+      }
+    }
     & .taima{
       @extend %taima;
     }
