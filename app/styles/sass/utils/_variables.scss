@@ -1,6 +1,10 @@
 $grisclaro: #aeaeae;
 $grisoscuro: #1e1e1e;
-
+$taima: #472C78;
+%taima{
+  color: #472C78;
+  font-weight: 700;
+}
 %flexwrap{
   display: flex;
   flex-flow: wrap;
@@ -11,6 +15,10 @@ $grisoscuro: #1e1e1e;
   width: 100%;
   padding-bottom: 10px;
   padding-top: 10px;
+  background: $grisclaro;
+}
+%container-50{
+  width: 50%;
   background: $grisclaro;
 }
 %titulo{
