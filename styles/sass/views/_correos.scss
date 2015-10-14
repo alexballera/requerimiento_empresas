@@ -12,6 +12,11 @@
       color: $grisoscuro;
     }
   }
+  &__web{
+    text-align: center;
+    font-weight: 300;
+    font-size: .8em;
+  }
   &__header{
     background: #472C78;
     width: 100%;
@@ -26,13 +31,13 @@
         }
     }
     &--figure {
-      margin: 0 1em 0 2em;
+      margin: 0 1em;
         & img{
         width: 120px;
       }
     }
     &--titulo {
-      margin: 0 0 0 1em;
+      margin: 0 1em;
       text-align: center;
       height: 120px;
       line-height: 120px;
@@ -42,19 +47,21 @@
   }
   &__body{
     padding: 1em 3em;
+    @include respond-to('small') {
+          text-align: center;
+        }
     &--titulo,
     &--titulo2{
       padding: 1em 0;
-      @include respond-to('small') {
-          text-align: center;
-        }
     }
   }
   &__descarga{
-    margin: 0 auto;
+    margin: 1em auto;
+    padding: 1em;
     width: 120px;
     &--titulo{
-      margin: 2em auto 1em auto;
+      margin: 1em auto;
+      text-align: center;
     }
     &--imagen{
       width: 120px;
@@ -72,7 +79,6 @@
       & i{
         font-size: 1.3em;
         margin-left: .3em;
-        
       }
     }
     &--redes{
