@@ -1,5 +1,6 @@
 .correo{
   // width: 50%;
+  background: $grisclaro;
   th,
   td{
     padding: .5em .5em .5em 0;
@@ -16,14 +17,15 @@
     text-align: center;
     font-weight: 300;
     font-size: .8em;
+    background: white;
   }
   &__header{
     background: #472C78;
     width: 100%;
-    min-height: 120px;
     &--contenedor{
       @extend %flexwrap;
       justify-content: left;
+      min-height: 120px;
       color: white;
       margin: 0 auto;
         @include respond-to('small') {
@@ -39,7 +41,7 @@
     &--titulo {
       margin: 0 1em;
       text-align: center;
-      height: 120px;
+      min-height: 120px;
       line-height: 120px;
       font-weight: 700;
       font-size: 2em;
@@ -47,18 +49,37 @@
   }
   &__body{
     padding: 1em 3em;
+    background: white;
+    width: 80%;
+    margin: 70px auto 0 auto;
     @include respond-to('small') {
           text-align: center;
+          padding: 1em;
         }
+    &--contenedor{
+      @extend %flexwrap;
+    }
+    &--figure,
+    &--mensaje{
+      max-width: 400px;
+      @include respond-to('xsmall') {
+          width: 100%;
+        }
+    }
+    &--img{
+      width: 300px;
+      @include respond-to('xsmall') {
+          display: none;
+        }
+    }
     &--titulo,
     &--titulo2{
       padding: 1em 0;
     }
   }
   &__descarga{
-    margin: 1em auto;
-    padding: 1em;
-    width: 300px;
+    margin: 2em auto 0 auto;
+    max-width: 300px;
     text-align: center;
     &--titulo{
       margin: 1em auto;
@@ -68,21 +89,21 @@
     }
   }
   &__footer{
-    max-height: 70px;
+    min-height: 70px;
     width: 60%;
     margin: 0 auto;
     padding: 0 1em;
     @extend %flexwrap;
-    &--redes,
     &--copy{
-      line-height: 70px;
-      & i{
-        font-size: 1.3em;
-        margin-left: .3em;
-      }
+      line-height: 85px;
     }
     &--redes{
-      margin-left: 2em;
+      line-height: 70px;
+      margin-top: 15px;
+      & i{
+        margin-left: .3em;
+        font-size: 1.7em;
+      }
     }
     & .taima{
       @extend %taima;
