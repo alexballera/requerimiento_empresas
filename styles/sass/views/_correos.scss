@@ -52,8 +52,8 @@
     background: white;
     width: 80%;
     margin: 70px auto 0 auto;
+    text-align: center;
     @include respond-to('small') {
-          text-align: center;
           padding: 1em;
         }
     &--contenedor{
@@ -68,6 +68,10 @@
     }
     &--img{
       width: 300px;
+      margin-top: 40%;
+      @include respond-to('tablet') {
+          margin-top: 0;
+        }
       @include respond-to('small') {
           width: 200px;
         }
@@ -92,9 +96,9 @@
     &--boton{
       background: #472C78;
       color: white;
+      margin-left: 0;
       @include respond-to('small') {
         font-size: 1em;
-        margin-left: 0;
       }
     }
     &--link{
