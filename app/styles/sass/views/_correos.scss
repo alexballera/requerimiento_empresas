@@ -63,8 +63,19 @@
     &--mensaje{
       max-width: 400px;
       @include respond-to('xsmall') {
-          width: 100%;
-        }
+        width: 100%;
+      }
+    }
+    &--figure{
+      @include respond-to('small') {
+        display: none;
+      }
+    }
+    &--hiden{
+      display: none;
+      @include respond-to('small') {
+        display: block;
+      }
     }
     &--img{
       width: 300px;
@@ -73,10 +84,10 @@
           margin-top: 0;
         }
       @include respond-to('small') {
-          width: 200px;
+          width: 150px;
         }
-      @include respond-to('xsmall') {
-          display: none;
+      @include respond-to('small') {
+          // display: none;
         }
     }
     &--titulo,
