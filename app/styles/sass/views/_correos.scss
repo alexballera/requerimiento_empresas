@@ -33,7 +33,7 @@
         }
     }
     &--figure {
-      margin: 0 1em;
+      margin: 0 0 0 1em;
         & img{
         width: 90px;
       }
@@ -45,6 +45,10 @@
       line-height: 90px;
       font-weight: 700;
       font-size: 2em;
+      &-brand{
+        margin: 0.75em 1em 0 0;
+        font-size: 1.5em;
+      }
     }
   }
   &__body{
