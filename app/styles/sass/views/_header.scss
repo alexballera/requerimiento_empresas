@@ -43,9 +43,9 @@
   }
   &.is-active{
     @include respond-to('medium') {
-        left: -10px;
-      }
+      left: -10px;
     }
+  }
   &__lista{
     margin: 0;
     padding: 0;
@@ -92,6 +92,12 @@
     position: absolute;
     left: 4em;
     top: .75em;
+    &--marca{
+      color: $grisclaro;
+      display: inline-block;
+      margin-left: .5em;
+      font-size: 1.2em;
+    }
     &--flag{
       display: inline-block;
       position: absolute;
