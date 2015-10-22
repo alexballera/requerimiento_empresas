@@ -68,6 +68,9 @@
     }
     &--img{
       width: 300px;
+      @include respond-to('small') {
+          width: 200px;
+        }
       @include respond-to('xsmall') {
           display: none;
         }
@@ -76,6 +79,9 @@
     &--titulo2{
       padding: 1em 0;
       text-align: center;
+      @include respond-to('small') {
+          font-size: 1.5em;
+        }
     }
     &--texto{
       text-align: justify;
@@ -86,6 +92,13 @@
     &--boton{
       background: #472C78;
       color: white;
+      @include respond-to('small') {
+        font-size: 1em;
+        margin-left: 0;
+      }
+    }
+    &--link{
+      margin: 0;
     }
   }
   &__descarga{
