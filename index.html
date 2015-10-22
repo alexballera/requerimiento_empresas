@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Taima Empresas</title>
     <!--  bower:css -->
     <!--  endbower  -->
@@ -16,24 +16,27 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
     <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <!--[if (gte IE 6)&(lte IE 8)]>
-      <script type="text/javascript" src="scripts/vendors/selectivizr-min.js"></script>
-      <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+    <script type="text/javascript" src="scripts/vendors/selectivizr-min.js"></script>
+    <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
     <![endif]-->
-</head>
-<body>
-  <!--[if lt  IE  8]>
+  </head>
+  <body>
+    <!--[if lt  IE  8]>
     <p  class="browsehappy">
-        Estás usando  un  navegador <strong>desactualizado</strong>.
-        Por favor <a  href="http://browsehappy.com/">actualiza  tu  navegador</a>
-        Para  mejorar la  experiencia..
+      Estás usando  un  navegador <strong>desactualizado</strong>.
+      Por favor <a  href="http://browsehappy.com/">actualiza  tu  navegador</a>
+      Para  mejorar la  experiencia..
     </p>
-  <![endif]-->
-  <header class="header" id="taima">
-    <button class="header__button is-active icon-menu" id="showMenu"></button>
-    <button class="header__button icon-menu" id="hideMenu"></button>
-    <nav class="menu" id="menu">
-      <figure class="menu__figure"><a href="#"><img class="menu__figure--imagen" src="images/img40x40.png" alt=""></a>
-      </figure>
+    <![endif]-->
+    <header class="header" id="taima">
+      <button class="header__button is-active icon-menu" id="showMenu"></button>
+      <button class="header__button icon-menu" id="hideMenu"></button>
+      <nav class="menu" id="menu">
+        <figure class="menu__figure"><a href="#"><img class="menu__figure--imagen" src="images/img40x40.png" alt=""></a>
+        <a href="#">
+          <figcaption class="menu__figure--marca">Taima</figcaption>
+        </a>
+        </figure>
       <ul class="menu__lista">
         <li class="menu__lista--item menu__lista--item-hide">
           <a href="#menu" class="menu__lista--link menu__lista--link-inicia">Inicia Sesión</a>
@@ -75,7 +78,6 @@
       </figure>
     </nav>
   </header>
-
   <section class="informacion" id="informacion">
     <h1 class="informacion__titulo u-titulo">¿Sabes qué opinan tus clientes de tus productos y servicios?</h1>
     <div class="informacion__contenedor">
@@ -85,74 +87,71 @@
         <img class="informacion__figure--img informacion__figure--img-250" src="images/img250x250.png" alt="">
       </figure>
       <main class="informacion__resumen">
-        <p class="informacion__resumen--texto">
-          No saber qué opinan, <strong>¡es un riesgo!</strong>
-        </p>
-        <p class="informacion__resumen--texto">
-          Si quieres mejorar, <strong>requieres saberlo.</strong>
-        </p>
-        <p class="informacion__resumen--texto">
-          <strong>Es vital</strong> , saber qué quieren obtener de ti...
-        </p>
-
-          <p class="informacion__resumen--texto"><br>
-          <strong>Taima.</strong> Valora tu opinión.
-        </p>
-        <!-- <input class="informacion__boton" type="button" value="CONTÁCTENOS"> -->
-        <a href="#openModal">
-          <button class="informacion__boton" type="button"> Contáctenos 
-          </button>
-        </a>
-        <div id="openModal" class="modalDialog">
-          <div>
-              <div class="footer__contenedor--form footer__contenedor--form-contactanos">
-                <h2 class="footer__contacto--titulo">Contáctanos:</h2>
-                <form class="footer__contacto--form" action="">
-                  <input class="footer__contacto--nombre" type="text" placeholder="Nombre">
-                  <input class="footer__contacto--telefono" type="tel" placeholder="Teléfono">
-                  <input class="footer__contacto--email" type="email" placeholder="Email">
-                  <a href="#close" title="Close" class="close">X</a>
-                  <a href="#close" title="Close" class="close__boton">
-                    <input class="footer__contacto--boton" type="button" value="Enviar">
-                  </a>
-                </form>
-              </div>
+      <p class="informacion__resumen--texto">
+        No saber qué opinan, <strong>¡es un riesgo!</strong>
+      </p>
+      <p class="informacion__resumen--texto">
+        Si quieres mejorar, <strong>requieres saberlo.</strong>
+      </p>
+      <p class="informacion__resumen--texto">
+        <strong>Es vital</strong> , saber qué quieren obtener de ti...
+      </p>
+      <p class="informacion__resumen--texto"><br>
+        <strong>Taima.</strong> Valora tu opinión.
+      </p>
+      <!-- <input class="informacion__boton" type="button" value="CONTÁCTENOS"> -->
+      <a href="#openModal">
+        <button class="informacion__boton" type="button"> Contáctenos
+        </button>
+      </a>
+      <div id="openModal" class="modalDialog">
+        <div>
+          <div class="footer__contenedor--form footer__contenedor--form-contactanos">
+            <h2 class="footer__contacto--titulo">Contáctanos:</h2>
+            <form class="footer__contacto--form" action="">
+              <input class="footer__contacto--nombre" type="text" placeholder="Nombre">
+              <input class="footer__contacto--telefono" type="tel" placeholder="Teléfono">
+              <input class="footer__contacto--email" type="email" placeholder="Email">
+              <a href="#close" title="Close" class="close">X</a>
+              <a href="#close" title="Close" class="close__boton">
+                <input class="footer__contacto--boton" type="button" value="Enviar">
+              </a>
+            </form>
           </div>
         </div>
+      </div>
       </main>
     </div>
   </section>
-
   <section class="informacion informacion__ofrecemos">
     <div id="ofrecemos"></div>
     <h1 class="informacion__titulo u-titulo"><strong>Taima.</strong> ¿Qué recibes?</h1>
-      <div class="informacion__contenedor">
-        <main class="informacion__resumen">
-          <p class="informacion__resumen--texto">
-             Plataforma móvil y web de <strong> investigación de opinión.</strong>
-          </p>
-          <p class="informacion__resumen--texto">
-            Resultados globales, segmentados y ultrasegmentados.
-          </p>
-          <p class="informacion__resumen--texto">
-            Un canal de comunicación directo con tus clientes.
-          </p>
-          <p class="informacion__resumen--texto">
-            En <strong>tiempo real</strong>.
-          </p>
-          <a href="#openModal">
-            <button class="informacion__boton" type="button"> Contáctenos 
-            </button>
-          </a>
-        </main>
-        <figure class="informacion__figure">
-          <img class="informacion__figure--img" src="images/img400x400.png" alt="">
-          <img class="informacion__figure--img informacion__figure--img-300" src="images/img300x300.png" alt="">
-          <img class="informacion__figure--img informacion__figure--img-250" src="images/img250x250.png" alt="">
-        </figure>
-      </div>
+    <div class="informacion__contenedor">
+      <main class="informacion__resumen">
+      <p class="informacion__resumen--texto">
+        Plataforma móvil y web de <strong> investigación de opinión.</strong>
+      </p>
+      <p class="informacion__resumen--texto">
+        Resultados globales, segmentados y ultrasegmentados.
+      </p>
+      <p class="informacion__resumen--texto">
+        Un canal de comunicación directo con tus clientes.
+      </p>
+      <p class="informacion__resumen--texto">
+        En <strong>tiempo real</strong>.
+      </p>
+      <a href="#openModal">
+        <button class="informacion__boton" type="button"> Contáctenos
+        </button>
+      </a>
+      </main>
+      <figure class="informacion__figure">
+        <img class="informacion__figure--img" src="images/img400x400.png" alt="">
+        <img class="informacion__figure--img informacion__figure--img-300" src="images/img300x300.png" alt="">
+        <img class="informacion__figure--img informacion__figure--img-250" src="images/img250x250.png" alt="">
+      </figure>
+    </div>
   </section>
-
   <section class="productos productos__clientes">
     <div id="clientes"></div>
     <h1 class="productos__titulo u-titulo">Planes fexibles que se adaptan a tu actividad y mercado.</h1>
@@ -164,7 +163,7 @@
           </figure>
           <h2 class="productos__item--titulo u-titulo">Corporativos</h2>
           <p class="productos__item--informacion">
-            Estudios nacionales</p>
+          Estudios nacionales</p>
           <p class="productos__item--informacion">Segmentación país</p>
           <p class="productos__item--informacion">Instituciones del Estado</p>
           <p class="productos__item--informacion"><strong>Opinadores Taima</strong></p>
@@ -177,7 +176,7 @@
           </figure>
           <h2 class="productos__item--titulo u-titulo">Empresariales</h2>
           <p class="productos__item--informacion">
-            Estudios en la empresa</p>
+          Estudios en la empresa</p>
           <p class="productos__item--informacion">Segmentación propia</p>
           <p class="productos__item--informacion">Instituciones del Estado</p>
           <p class="productos__item--informacion"><strong>Opinadores propios</strong></p>
@@ -190,7 +189,7 @@
           </figure>
           <h2 class="productos__item--titulo u-titulo">Aliados</h2>
           <p class="productos__item--informacion">
-            Estudios en sitio</p>
+          Estudios en sitio</p>
           <p class="productos__item--informacion">Segmentación aleatoria</p>
           <p class="productos__item--informacion">Instituciones del Estado</p>
           <p class="productos__item--informacion"><strong>Opinadores en sitio</strong></p>
@@ -198,7 +197,6 @@
       </article>
     </div>
   </section>
-
   <section class="productos productos__productos">
     <div id="productos"></div>
     <h1 class="productos__titulo u-titulo">Nuestros Productos</h1>
@@ -210,7 +208,7 @@
           </figure>
           <h2 class="productos__item--titulo u-titulo">Sondeos Por Demanda</h2>
           <p class="productos__item--informacion">
-            Estudios de duración y tamaño variable</p>
+          Estudios de duración y tamaño variable</p>
           <p class="productos__item--informacion">De alcance propio</p>
         </a>
       </article>
@@ -221,7 +219,7 @@
           </figure>
           <h2 class="productos__item--titulo u-titulo">Sondeos De Tendencias</h2>
           <p class="productos__item--informacion">
-            Resultados cruzados con otros Sondeos</p>
+          Resultados cruzados con otros Sondeos</p>
           <p class="productos__item--informacion">Estudios de mercado de larga duración</p>
           <p class="productos__item--informacion">Oportunidad de colocar tus propias preguntas</p>
         </a>
@@ -233,7 +231,7 @@
           </figure>
           <h2 class="productos__item--titulo u-titulo">Votación en línea</h2>
           <p class="productos__item--informacion">
-            Universidades</p>
+          Universidades</p>
           <p class="productos__item--informacion">Condominios</p>
           <p class="productos__item--informacion">Juntas directivas</p>
           <p class="productos__item--informacion">Organizaciones de la sociedad civil</p>
@@ -243,7 +241,6 @@
       </article>
     </div>
   </section>
-
   <section class="productos productos__productos">
     <div id="otros_productos"></div>
     <h1 class="productos__titulo u-titulo">Además, contamos con productos especiales adaptados a tu actividad.</h1>
@@ -255,7 +252,7 @@
           </figure>
           <h2 class="productos__item--titulo u-titulo">Promociones</h2>
           <p class="productos__item--informacion">
-            Invitaciones a eventos</p>
+          Invitaciones a eventos</p>
           <p class="productos__item--informacion">A participar en sondeos de opinión Taima</p>
           <p class="productos__item--informacion">Alcance de la promoción en <strong>Tiempo Real</strong></p>
         </a>
@@ -267,7 +264,7 @@
           </figure>
           <h2 class="productos__item--titulo u-titulo">Mercadeo Directo</h2>
           <p class="productos__item--informacion">
-            Resultados cruzados con otros Sondeos</p>
+          Resultados cruzados con otros Sondeos</p>
           <p class="productos__item--informacion">Estudios de mercado de larga duración</p>
           <p class="productos__item--informacion">Oportunidad de colocar tus propias preguntas</p>
         </a>
@@ -279,7 +276,7 @@
           </figure>
           <h2 class="productos__item--titulo u-titulo">Monitoreo de Medios</h2>
           <p class="productos__item--informacion">
-            Universidades</p>
+          Universidades</p>
           <p class="productos__item--informacion">Condominios</p>
           <p class="productos__item--informacion">Juntas directivas</p>
           <p class="productos__item--informacion">Organizaciones de la sociedad civil</p>
@@ -289,7 +286,6 @@
       </article>
     </div>
   </section>
-
   <section class="productos productos__servicios">
     <div id="servicios"></div>
     <h1 class="productos__titulo u-titulo">Disponemos de aliados, capacitados para apoyarte con...</h1>
@@ -301,7 +297,7 @@
           </figure>
           <h2 class="productos__item--titulo u-titulo">Asesorías</h2>
           <p class="productos__item--informacion">
-            Básica y experta</p>
+          Básica y experta</p>
           <p class="productos__item--informacion">Orientación del estudio</p>
           <p class="productos__item--informacion">Segmentación avanzada</p>
           <p class="productos__item--informacion">Creación de sondeos</p>
@@ -314,7 +310,7 @@
           </figure>
           <h2 class="productos__item--titulo u-titulo">Datos</h2>
           <p class="productos__item--informacion">
-            Análisis de datos</p>
+          Análisis de datos</p>
           <p class="productos__item--informacion">Elaboración de informes</p>
           <p class="productos__item--informacion">Entrega de datos</p>
           <p class="productos__item--informacion">Análisis estadísticos</p>
@@ -327,68 +323,65 @@
           </figure>
           <h2 class="productos__item--titulo u-titulo">Seguimiento</h2>
           <p class="productos__item--informacion">
-            Acompañamiento INICIO - FIN</p>
+          Acompañamiento INICIO - FIN</p>
           <p class="productos__item--informacion">Revisión aleatoria de avances del sondeo</p>
           <p class="productos__item--informacion">Informes</p>
         </a>
       </article>
     </div>
   </section>
-
   <footer class="footer">
-      <section class="footer__contacto footer__contenedor">
-
-        <div class="footer__contenedor--form footer__contenedor--form-contactanos">
-          <h2 class="footer__contacto--titulo">Contáctanos:</h2>
-          <form class="footer__contacto--form" action="">
-            <input class="footer__contacto--nombre" type="text" placeholder="Nombre">
-            <input class="footer__contacto--telefono" type="tel" placeholder="Teléfono">
-            <input class="footer__contacto--email" type="email" placeholder="Email">
-            <textarea class="footer__contacto--mensaje" placeholder="Mensaje"></textarea>
-            <input class="footer__contacto--boton" type="submit" name="name" value="Enviar">
-          </form>
-        </div>
-
-        <div class="footer__contenedor--form footer__contenedor--form-enlaces">
-          <h2 class="footer__contacto--titulo">Productos y Servicios:</h2>
-            <p><a href="#informacion">Taima</a></p>
-            <p><a href="#ofrecemos">¿Qué Ofrecemos?</a></p>
-            <p><a href="#clientes">Nuestros Clientes</a></p>
-            <p><a href="#productos">Nuestros Productos</a></p>
-            <p><a href="#servicios">Nuestros Servicios</a></p>
-            <p><a href="#productos">Planes & Precios</a></p>
-        </div>
-        <div class="footer__contenedor--form footer__contenedor--form-direccion">
-          <div class="footer__contenedor--redes">
-            <h2 class="footer__contacto--titulo">Síguenos:</h2>
-            <div class="footer__contacto--redes">
-              <a href="http://twitter.com" target="_blank" class="footer__contacto--icon"><i class="icon-twitter"></i></a>
-              <a href="http://facebook.com" target="_blank" class="footer__contacto--icon"><i class="icon-facebook"></i></a>
-              <a href="http://google.com" target="_blank" class="footer__contacto--icon"><i class="icon-google"></i></a>
-              <!-- <a href="http://linkedin.com" target="_blank" class="footer__contacto--icon"><i class="icon-linkedin"></i></a> -->
-            </div>
+    <section class="footer__contacto footer__contenedor">
+      <div class="footer__contenedor--form footer__contenedor--form-contactanos">
+        <h2 class="footer__contacto--titulo">Contáctanos:</h2>
+        <form class="footer__contacto--form" action="">
+          <input class="footer__contacto--nombre" type="text" placeholder="Nombre">
+          <input class="footer__contacto--telefono" type="tel" placeholder="Teléfono">
+          <input class="footer__contacto--email" type="email" placeholder="Email">
+          <textarea class="footer__contacto--mensaje" placeholder="Mensaje"></textarea>
+          <input class="footer__contacto--boton" type="submit" name="name" value="Enviar">
+        </form>
+      </div>
+      <div class="footer__contenedor--form footer__contenedor--form-enlaces">
+        <h2 class="footer__contacto--titulo">Productos y Servicios:</h2>
+        <p><a href="#informacion">Taima</a></p>
+        <p><a href="#ofrecemos">¿Qué Ofrecemos?</a></p>
+        <p><a href="#clientes">Nuestros Clientes</a></p>
+        <p><a href="#productos">Nuestros Productos</a></p>
+        <p><a href="#servicios">Nuestros Servicios</a></p>
+        <p><a href="#productos">Planes & Precios</a></p>
+      </div>
+      <div class="footer__contenedor--form footer__contenedor--form-direccion">
+        <div class="footer__contenedor--redes">
+          <h2 class="footer__contacto--titulo">Síguenos:</h2>
+          <div class="footer__contacto--redes">
+            <a href="http://twitter.com" target="_blank" class="footer__contacto--icon"><i class="icon-twitter"></i></a>
+            <a href="http://facebook.com" target="_blank" class="footer__contacto--icon"><i class="icon-facebook"></i></a>
+            <a href="http://google.com" target="_blank" class="footer__contacto--icon"><i class="icon-google"></i></a>
+            <!-- <a href="http://linkedin.com" target="_blank" class="footer__contacto--icon"><i class="icon-linkedin"></i></a> -->
           </div>
         </div>
-      </section>
-      <section class="footer__contacto--legal">
-        <nav class="footer__contacto--nav">
-          <ul class="footer__contacto--lista">
-            <li class="footer__contacto--item"><a class="footer__contacto--link privacidad" href="views/legal.html">Políticas de Privacidad</a></li>
-            <li class="footer__contacto--item"><a class="footer__contacto--link legales" href="views/legal.html">Términos Legales</a></li>
-            <li class="footer__contacto--item"><a class="footer__contacto--link uso" href="views/legal.html">Términos de Uso</a></li>
-            <li class="footer__contacto--item"><a class="footer__contacto--link span" href="views/legal.html">Políticas sobre Spam</a></li>
-          </ul>
-        </nav>
-      </section>
+      </div>
+    </section>
+    <section class="footer__contacto--legal">
+      <nav class="footer__contacto--nav">
+        <ul class="footer__contacto--lista">
+          <li class="footer__contacto--item"><a class="footer__contacto--link privacidad" href="views/legal.html">Políticas de Privacidad</a></li>
+          <li class="footer__contacto--item"><a class="footer__contacto--link legales" href="views/legal.html">Términos Legales</a></li>
+          <li class="footer__contacto--item"><a class="footer__contacto--link uso" href="views/legal.html">Términos de Uso</a></li>
+          <li class="footer__contacto--item"><a class="footer__contacto--link span" href="views/legal.html">Políticas sobre Spam</a></li>
+        </ul>
+      </nav>
+    </section>
   </footer>
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
-    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-    e.src='https://www.google-analytics.com/analytics.js';
-    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-64526674-2','auto');ga('send','pageview');
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+  e.src='https://www.google-analytics.com/analytics.js';
+  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-64526674-2','auto');ga('send','pageview');
   </script>
   <!--  bower:js  -->
   <!--  endbower  -->
