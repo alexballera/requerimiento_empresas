@@ -86,9 +86,12 @@
       @include respond-to('small') {
           width: 150px;
         }
-      @include respond-to('small') {
-          // display: none;
+      &-clave{
+        width: 400px;
+        @include respond-to('medium') {
+          width: 300px;
         }
+      }
     }
     &--titulo,
     &--titulo2{
