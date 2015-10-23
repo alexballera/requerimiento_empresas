@@ -70,19 +70,22 @@
         width: 100%;
       }
     }
-    &--figure{
-      @include respond-to('small') {
-        display: none;
-      }
-    }
+    // &--figure{
+    //   @include respond-to('small') {
+    //     display: none;
+    //   }
+    // }
     &--hiden{
       display: none;
-      @include respond-to('small') {
-        display: block;
-      }
+    //   @include respond-to('small') {
+    //     display: block;
+    //   }
     }
     &--img{
       width: 300px;
+      display: block;
+      max-width: 100%;
+      height: auto;
       margin-top: 40%;
       @include respond-to('tablet') {
           margin-top: 0;
